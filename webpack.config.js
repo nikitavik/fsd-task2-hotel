@@ -7,16 +7,24 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main: "./index.js"
+        main: "./index.js",
+        colorType: "./colors-types.js"
     },
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
-        publicPath: '',
+        publicPath: '/dist',
+    },
+    devServer: {
+        overlay: true
     },
     plugins: [
         new HTMLWebpackPlugin({
             template: "index.pug",
+            inject: true,
+        }),
+        new HTMLWebpackPlugin({
+            template: "colors-types.pug",
             inject: true,
         }),
         new CleanWebpackPlugin(),
@@ -45,6 +53,10 @@ module.exports = {
                 test: /\.pug$/,
                 use:["pug-loader"]
             },
+            {
+                test: /\.js$/,
+                loader: "babel-loader",
+            }
         ]
     }
 }
