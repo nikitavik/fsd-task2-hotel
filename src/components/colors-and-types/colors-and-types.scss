@@ -3,7 +3,13 @@
 }
 .colors-and-types-container{
   display: flex;
-  align-items: center;
   flex-flow: row wrap;
   justify-content: space-around;
+  .type-box-wrapper{
+
+  }
+  .color-block-wrapper{
+
+  }
 }
+

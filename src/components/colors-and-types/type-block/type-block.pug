@@ -1,6 +1,6 @@
 mixin typeBox(tagText, typeText, typeClass)
     .type-box
-        .type-box__tag= tagText
+        .type-box__tag(class= typeClass)= tagText
         .type-box__text(class= typeClass)= typeText
 
 .type-block
