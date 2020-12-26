@@ -1,0 +1,5 @@
+mixin textField (labelText, name, placeholder)
+        form.text-field(action="#" method="get")
+            label.label(for=name)= labelText
+            input.input(type="text" placeholder=placeholder name=name id=name)
++textField("TEXT FIELD", "email", "Email")
