@@ -1,2 +1,2 @@
-Task for FSD
-Hotel Website
+# fsd-task2-hotel
+Task 2 for FSD 
