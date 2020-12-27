@@ -1,0 +1,16 @@
+@import "src/styles/main";
+.click-me-button{
+  padding: 14px 21px 15px 19px;
+  font-family: $Montserrat;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: transparent;
+  border-radius: 22px;
+  &:active{
+    outline: none;
+  }
+}
