@@ -4,19 +4,28 @@
   flex-flow: column;
   max-width: 320px;
   font-family: $Montserrat;
-  .label{
+  &__label{
     margin-bottom: 5px;
     font-size: 12px;
     font-weight: bold;
-    line-height: 1.21;
+    line-height: 129%;
     text-transform: uppercase;
   }
-  .input{
+  &__input{
     margin: 0;
-    padding: 13px 256px 13px 15px;
+    padding: 13px 15px 13px 15px;
     background: #FFFFFF;
+    color: rgba(31, 32, 65, 0.25);
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
+    &:hover{
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      color: rgba(31, 32, 65, 0.75);
+    }
+    &:focus{
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      color: rgba(31, 32, 65, 0.75);
+    }
   }
 }
