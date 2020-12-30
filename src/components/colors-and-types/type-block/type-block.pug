@@ -1,4 +1,4 @@
-mixin typeBox(tagText, typeText, typeClass)
+mixin typeBox(tagText, typeText, modClass)
     .type-box
-        .type-box__tag(class= typeClass)= tagText
-        .type-box__text(class= typeClass)= typeText
+        .type-box__tag(class= `type-box__tag_${modClass}`)= tagText
+        .type-box__text(class= `type-box__text_${modClass}`)= typeText

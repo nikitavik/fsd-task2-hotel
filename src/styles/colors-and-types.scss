@@ -1,9 +1,9 @@
+.logo-container{
+  margin: 30px 72px 67px 30px;
+}
 .color-types-container{
   display: flex;
   justify-content: space-around;
-  .logo-container{
-    margin: 30px 72px 67px 30px;
-  }
   .color-container{
     max-width: 282px;
     height: 610px;
@@ -12,10 +12,10 @@
     justify-content: space-between;
   }
   .type-container{
-    max-width: 436px;
-    height: 321px;
     display: flex;
     flex-direction: column;
+    width: 436px;
+    height: 321px;
     justify-content: space-between;
   }
 }

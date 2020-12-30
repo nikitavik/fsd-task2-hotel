@@ -1,34 +1,40 @@
 @import "../../../styles/main";
-.type-box{
+.type-box {
   display: flex;
   flex-flow: row;
   font-family: $Montserrat;
-
-  &__tag{
-    font-weight: normal;
+  &__tag {
+    width: 37px;
+    font-weight: normal !important;
     color: $DarkShade25 !important;
+    text-align: right;
+    &_sub-section{
+      @include sub-section
     }
-  &__text{
+    &_widget-title{
+      @include widget-title
+    }
+    &_label-cta-text{
+      @include label-cta-text
+    }
+    &_body-text{
+      @include body-text
+    }
+  }
+  &__text {
+    width: 369px;
     padding-left: 30px;
+    &_sub-section{
+      @include sub-section
+    }
+    &_widget-title{
+      @include widget-title
+    }
+    &_label-cta-text{
+      @include label-cta-text
+    }
+    &_body-text{
+      @include body-text
+    }
   }
-  .sub-section{
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.21;
-  }
-  .widget-title{
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 1.21;
-  }
-  .label-cta-text{
-    font-weight: bold;
-    line-height: 1.21;
-  }
-  .body-text{
-    font-weight: normal;
-    line-height: 1.71;
-    color: $DarkShade75;
-}
-
 }
