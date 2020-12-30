@@ -2,9 +2,3 @@ mixin typeBox(tagText, typeText, typeClass)
     .type-box
         .type-box__tag(class= typeClass)= tagText
         .type-box__text(class= typeClass)= typeText
-
-.type-block
-    +typeBox("H1", "This one is the sub-section or widget title", "sub-section")
-    +typeBox("H2", "Next one is the item title inside widgets", "widget-title")
-    +typeBox("H3", "This is a label or CTA text", ".label-cta-text" )
-    +typeBox("body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.", "body-text")

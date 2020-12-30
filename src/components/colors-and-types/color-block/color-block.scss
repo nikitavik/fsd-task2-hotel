@@ -2,11 +2,15 @@
 .color-box{
   display: flex;
   flex-direction: row;
-  max-width: 282px;
-  max-height: 90px;
-  padding-bottom: 20px;
+  align-items: center;
+  //max-width: 282px;
+  max-height: 70px;
+  font-family: $Montserrat;
+  //margin-bottom: 20px;
   &__square{
-    padding: 35px 35px;
+    padding: 35px;
+    //width: 70px;
+    //height: 70px;
     border-radius: 6px;
     &_background_ds100{
       background: $DarkShade;
@@ -32,8 +36,7 @@
   }
 }
 .box-name{
-    padding: 7px 1px 34px 40px;
-    font-family: $Montserrat;
+    padding-left: 40px;
   &__name{
     font-weight: bold;
     font-size: 19px;
