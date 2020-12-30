@@ -1,14 +1,15 @@
 @import "../../../styles/main";
 .type-box{
-  max-width: 436px;
   display: flex;
   flex-flow: row;
-  justify-items: center;
   font-family: $Montserrat;
+
+  &__tag{
+    font-weight: normal;
+    color: $DarkShade25 !important;
+    }
   &__text{
-    display: flex;
-    margin: 0 0 51px 30px;
-    justify-items:start;
+    padding-left: 30px;
   }
   .sub-section{
     font-weight: bold;
@@ -29,12 +30,5 @@
     line-height: 1.71;
     color: $DarkShade75;
 }
-  &__tag{
-    margin-left: 20px;
-    font-weight: normal;
-    color: $DarkShade25 !important;
-    &.body-text{
-      margin-left: 0;
-    }
-  }
+
 }
