@@ -13,7 +13,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
         title TOXIN
     body
-        img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
+        img.gray-logo(src="../dist/img/icon/logo-gray.png" alt="Logo")
         .container
             .text-field-wrapper
                 +textField("Text field", "email", "Email", "")
@@ -22,7 +22,7 @@ html(lang="ru")
                 +dropdown("Dropdown", "dropdown-test", ["Сколько Гостей?",1, 2, 3, "4"])
         .container
             .checkbox-wrapper
-                +checkBox("checkbox buttons",[{name: "smoke", nameText: "Можно курить"},
+                +checkBox([{name: "smoke", nameText: "Можно курить"},
                     {name: "animals", nameText: "Можно с питомцами"},
                     {name:"guests", nameText: "Можно пригласить гостей (до 10 человек)"}])
         .container

@@ -1,4 +1,4 @@
-mixin textField (labelText, name, placeholder)
+mixin textField (labelText, name, placeholder, value)
         form.text-field(action="#" method="get")
             label.text-field__label(for=name)= labelText
-            input.text-field__input(type="text" placeholder=placeholder name=name id=name)
+            input.text-field__input(type="text" placeholder=placeholder name=name id=name value= value)
