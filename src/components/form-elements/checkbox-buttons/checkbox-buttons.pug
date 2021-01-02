@@ -1,0 +1,7 @@
+mixin checkBox(checkboxName,boxes)
+    form.checkbox(action="#" method="get")
+        legend.checkbox__name= checkboxName
+        for box in boxes
+            .checkbox__item
+                input.checkbox__input(type="checkbox", id=box.name, name=box.name)
+                label.checkbox__label(for=box.name)= box.nameText
