@@ -1,0 +1,52 @@
+@import "src/styles/main";
+.checkbox{
+  display: flex;
+  flex-flow: column;
+  font-family: $Montserrat;
+  &__name{
+    @include label-cta-text
+  }
+  &__label{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.29;
+    color: $DarkShade50;
+  }
+  &__item{
+    display: flex;
+    flex-flow: row;
+  }
+  &__input{
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    border: 1px solid $DarkShade25;
+    border-radius: 4px;
+    &:active, &:checked:active,  {
+      border: $Purple;
+    }
+    &:hover {
+      border: 1px solid $Purple;
+      color: $Purple;
+    }
+    &:checked{
+      border: 1px solid $Purple;
+      color: $Purple;
+    }
+    &:checked:after {
+      content: '';
+      font-size: 14px;
+      position: absolute;
+      width: 6px;
+      height: 8px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      transform: rotate(45deg);
+    }
+
+  }
+}
