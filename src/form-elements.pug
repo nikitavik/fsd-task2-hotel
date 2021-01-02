@@ -2,6 +2,7 @@ include ./components/form-elements/button/button
 include ./components/form-elements/text-field/text-field
 include ./components/form-elements/dropdown/dropdown
 include ./components/form-elements/checkbox-buttons/checkbox-buttons
+include components/form-elements/arrow-button/arrow-button
 doctype html
 html(lang="ru")
     head
@@ -11,6 +12,7 @@ html(lang="ru")
         link(rel="stylesheet" href="main.css")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet")
         title TOXIN
     body
         img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
@@ -27,4 +29,6 @@ html(lang="ru")
                     {name:"guests", nameText: "Можно пригласить гостей (до 10 человек)"}])
         .container
             .button-wrapper
-                +button("click me", "click-me")
+                +button("click me")
+            .arrow-button-wrapper
+                +arrButton("перейти к оплате")
