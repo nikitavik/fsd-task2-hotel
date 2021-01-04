@@ -15,17 +15,19 @@
     margin: 0;
     padding: 13px 15px 13px 15px;
     background: #FFFFFF;
-    color: rgba(31, 32, 65, 0.25);
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    color: $DarkShade75;
+    border: 1px solid $DarkShade25;
     box-sizing: border-box;
     border-radius: 4px;
+    outline: none;
+    &::placeholder{
+      color: $DarkShade25;
+    }
     &:hover{
-      border: 1px solid rgba(31, 32, 65, 0.5);
-      color: rgba(31, 32, 65, 0.75);
+      border: 1px solid $DarkShade50;
     }
     &:focus{
-      border: 1px solid rgba(31, 32, 65, 0.5);
-      color: rgba(31, 32, 65, 0.75);
+      border: 1px solid $DarkShade50;
     }
   }
 }
