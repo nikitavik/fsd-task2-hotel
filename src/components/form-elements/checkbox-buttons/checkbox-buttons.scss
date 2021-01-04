@@ -4,9 +4,12 @@
   flex-flow: column;
   font-family: $Montserrat;
   &__name{
-    @include label-cta-text
+    @include label-cta-text;
+    padding-bottom: 17px;
+
   }
   &__label{
+    max-width: 192px;
     font-weight: normal;
     font-size: 14px;
     line-height: 1.29;
@@ -15,6 +18,7 @@
   &__item{
     display: flex;
     flex-flow: row;
+    padding-bottom: 11px;
   }
   &__input{
     position: relative;
@@ -24,7 +28,7 @@
     box-sizing: border-box;
     width: 20px;
     height: 20px;
-    margin: 0;
+    margin: 0 10px 0 0;
     padding: 0;
     background: #FFFFFF;
     border: 1px solid $DarkShade25;
