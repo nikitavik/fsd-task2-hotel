@@ -1,8 +1,9 @@
 include ./components/form-elements/button/button
+include ./components/form-elements/ghost-button/ghost-button
 include ./components/form-elements/text-field/text-field
 include ./components/form-elements/dropdown/dropdown
 include ./components/form-elements/checkbox-buttons/checkbox-buttons
-include components/form-elements/arrow-button/arrow-button
+include ./components/form-elements/arrow-button/arrow-button
 doctype html
 html(lang="ru")
     head
@@ -10,9 +11,8 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         link(rel="stylesheet" href="main.css")
-        link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet")
+        link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
         title TOXIN
     body
         img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
@@ -21,7 +21,7 @@ html(lang="ru")
                 +textField("Text field", "email", "Email", "")
                 +textField("Text field","text-field-focused", "", "This is pretty awesome")
             .dropdown-wrapper
-                +dropdown("Dropdown", "dropdown-test", ["Сколько Гостей?",1, 2, 3, "4"])
+                +dropdown("Dropdown","Сколько Гостей?", "dropdown-test", [1, 2, 3, "4"])
         .container
             .checkbox-wrapper
                 +checkBox("checkbox buttons", [{name: "smoke", nameText: "Можно курить"},
@@ -29,6 +29,7 @@ html(lang="ru")
                     {name:"guests", nameText: "Можно пригласить гостей (до 10 человек)"}])
         .container
             .button-wrapper
-                +button("click me")
+                +btn("click me")
+                +ghostBtn("click me")
             .arrow-button-wrapper
                 +arrButton("перейти к оплате")
