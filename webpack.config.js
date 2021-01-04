@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const miniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
+const webpack = require("webpack");
 const PAGES_DIR = path.resolve(__dirname, "src")
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
@@ -22,14 +23,13 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        // new HTMLWebpackPlugin({
-        //     template: "index.pug",
-        //     inject: true,
-        // }),
+        new webpack.ProvidePlugin({
+           $: "jquery",
+           jQueryL: 'jquery'
+        }),
         new CleanWebpackPlugin(),
         new miniCssExtractPlugin({
             filename: "[name].css"
-
         }),
         new CopyPlugin({
             patterns: [
