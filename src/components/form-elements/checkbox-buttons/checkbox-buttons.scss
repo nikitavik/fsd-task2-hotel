@@ -17,6 +17,8 @@
     flex-flow: row;
   }
   &__input{
+    position: relative;
+    outline: none;
     -webkit-appearance: none;
     cursor: pointer;
     box-sizing: border-box;
@@ -27,9 +29,6 @@
     background: #FFFFFF;
     border: 1px solid $DarkShade25;
     border-radius: 4px;
-    &:active, &:checked:active,  {
-      border: $Purple;
-    }
     &:hover {
       border: 1px solid $Purple;
       color: $Purple;
@@ -39,11 +38,28 @@
       color: $Purple;
     }
     &:checked:after {
-      content: '';
-      font-size: 14px;
       position: absolute;
-      width: 6px;
+      content: '';
+
+      width: 2px;
+      height: 4px;
+      left: 5.8px;
+      top: 7px;
+
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      transform: rotate(-45deg);
+    }
+    &:checked:before {
+      position: absolute;
+      content: '';
+
+      width: 2px;
       height: 8px;
+      left: 10px;
+      right: 0;
+      bottom: 0;
+      top: 5px;
+
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       transform: rotate(45deg);
     }
