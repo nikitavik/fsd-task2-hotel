@@ -1,0 +1,9 @@
+mixin dropdown (labelText, text, name, options)
+    form.dropdown(action="#" method="get")
+        label.dropdown__label(for=name)= labelText
+        .dropdown__input(id=name)
+            span.dropdown__text= text
+            span(class="material-icons dropdown__expand") expand_more
+        //.dropdown__options
+        //    for option in options
+        //        .dropdown__option= option
