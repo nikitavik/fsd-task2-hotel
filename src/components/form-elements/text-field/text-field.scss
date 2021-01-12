@@ -2,24 +2,24 @@
 .text-field{
   display: flex;
   flex-flow: column;
-  max-width: 320px;
-  font-family: $Montserrat;
   &__label{
     margin-bottom: 5px;
     font-size: 12px;
     font-weight: bold;
-    line-height: 129%;
+    line-height: (14,63/12);
     text-transform: uppercase;
   }
   &__input{
-    margin: 0;
+    box-sizing: border-box;
     padding: 13px 15px 13px 15px;
+    max-height: 44px;
+    width: 100%;
     background: #FFFFFF;
     color: $DarkShade75;
     border: 1px solid $DarkShade25;
-    box-sizing: border-box;
     border-radius: 4px;
-    outline: none;
+    font-size: 14px;
+    line-height: (24/14);
     &::placeholder{
       color: $DarkShade25;
     }
