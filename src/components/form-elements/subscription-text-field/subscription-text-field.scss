@@ -1,0 +1,36 @@
+@import "src/styles/main";
+.subscription-field{
+
+  &__label{
+    padding: 9px 0 9px 15px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+  }
+  &__text{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: (15/12);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  &__input{
+    &::placeholder{
+      text-transform: capitalize;
+      font-size: 14px;
+      line-height: (24/14);
+      color: $DarkShade25;
+  }
+  }
+  &__arrow{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    top: 10%;
+    right: -5%;
+    background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
