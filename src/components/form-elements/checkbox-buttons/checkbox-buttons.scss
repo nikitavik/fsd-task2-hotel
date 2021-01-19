@@ -1,72 +1,30 @@
 @import "src/styles/main";
 .checkbox{
-  display: flex;
-  flex-flow: column;
-  font-family: $Montserrat;
   &__name{
     @include label-cta-text;
-    padding-bottom: 17px;
-
-  }
-  &__label{
-    max-width: 192px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.29;
-    color: $DarkShade50;
-  }
-  &__item{
-    display: flex;
-    flex-flow: row;
-    padding-bottom: 11px;
+    margin-bottom: 17px;
   }
   &__input{
+    display: none;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: (18/14);
+    color: $DarkShade50;
+  }
+  &__mark{
     position: relative;
-    outline: none;
-    -webkit-appearance: none;
-    cursor: pointer;
-    box-sizing: border-box;
+    display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 0 10px 0 0;
-    padding: 0;
     background: #FFFFFF;
-    border: 1px solid $DarkShade25;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
     border-radius: 4px;
-    &:hover {
-      border: 1px solid $Purple;
-      color: $Purple;
-    }
-    &:checked{
-      border: 1px solid $Purple;
-      color: $Purple;
-    }
-    &:checked:after {
-      position: absolute;
-      content: '';
-
-      width: 2px;
-      height: 4px;
-      left: 5.8px;
-      top: 7px;
-
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      transform: rotate(-45deg);
-    }
-    &:checked:before {
-      position: absolute;
-      content: '';
-
-      width: 2px;
-      height: 8px;
-      left: 10px;
-      right: 0;
-      bottom: 0;
-      top: 5px;
-
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      transform: rotate(45deg);
-    }
+    cursor: pointer;
+  }
+  &__input:checked + &__mark{
+    border: 1px solid $Purple;
 
   }
 }

@@ -3,5 +3,7 @@ mixin checkBox(checkboxName,boxes)
         .checkbox__name= checkboxName
         for box in boxes
             .checkbox__item
-                input.checkbox__input(type="checkbox", id=box.name, name=box.name)
-                label.checkbox__label(for=box.name)= box.nameText
+                label.checkbox__label(for=box.name)
+                    input.checkbox__input(type="checkbox", id=box.name, name=box.name, value=box.value)
+                    .checkbox__mark
+                span.checkbox__text= box.nameText
