@@ -2,7 +2,7 @@ mixin toggle(name, tglName, tglLabel)
     .toggle
         .toggle__name= tglName
         label.toggle__label(for=name)= tglLabel
-            input.toggle__input(type="checkbox" id=name)
+            input.toggle__input(type="checkbox" id=name name=name)
             .toggle__button
 
 
