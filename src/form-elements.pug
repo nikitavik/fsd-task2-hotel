@@ -3,7 +3,10 @@ include ./components/form-elements/ghost-button/ghost-button
 include ./components/form-elements/text-field/text-field
 include ./components/form-elements/dropdown/dropdown
 include ./components/form-elements/checkbox-buttons/checkbox-buttons
+include ./components/form-elements/radio-buttons/radio-buttons
 include ./components/form-elements/arrow-button/arrow-button
+include ./components/form-elements/toggle/toggle
+include ./components/form-elements/subscription-text-field/subscription-text-field
 doctype html
 html(lang="ru")
     head
@@ -13,23 +16,37 @@ html(lang="ru")
         link(rel="stylesheet" href="main.css")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
+        script(src="main.bundle.js")
         title TOXIN
     body
         img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
-        .container
-            .text-field-wrapper
-                +textField("Text field", "email", "Email", "")
-                +textField("Text field","text-field-focused", "", "This is pretty awesome")
-            .dropdown-wrapper
-                +dropdown("Dropdown","Сколько Гостей?", "dropdown-test", [1, 2, 3, "4"])
-        .container
-            .checkbox-wrapper
-                +checkBox("checkbox buttons", [{name: "smoke", nameText: "Можно курить"},
-                    {name: "animals", nameText: "Можно с питомцами"},
-                    {name:"guests", nameText: "Можно пригласить гостей (до 10 человек)"}])
-        .container
-            .button-wrapper
-                +btn("click me")
-                +ghostBtn("click me")
-            .arrow-button-wrapper
-                +arrButton("перейти к оплате")
+        .form-boxes
+            .container
+                .text-field-wrapper
+                    +textField("Text field", "email", "Email", "")
+                .text-field-wrapper
+                    +textField("Text field","text-field-focused", "", "This is pretty awesome")
+                .dropdown-wrapper
+                    +dropdown("Dropdown","Сколько Гостей?", "dropdown-test", [1, 2, 3, "4"])
+                .subscription-wrapper
+                    +subscrText("subscription text field", "subscribe", "email")
+            .container
+                .checkbox-wrapper
+                    +checkBox("checkbox buttons", [
+                        {name: "smoke",value: "canSmoke", nameText: "Можно курить"},
+                        {name: "animals", value: "withAnimals", nameText: "Можно с питомцами"},
+                        {name:"guests", value: "guestsAllowed" , nameText: "Можно пригласить гостей (до 10 человек)"}
+                        ])
+                .radiobox-wrapper
+                    +radioBox("radio buttons", [
+                        {name: "gender", value: "men", nameText: "Мужчина"},
+                        {name: "gender", value: "woman", nameText: "Женщина"}
+                    ])
+                .toggle-wrapper
+                    +toggle("special", "Toggle", "Получать спрецпредложения")
+            .container
+                .button-wrapper
+                    +btn("click me")
+                    +ghostBtn("click me")
+                .arrow-button-wrapper
+                    +arrButton("перейти к оплате")
