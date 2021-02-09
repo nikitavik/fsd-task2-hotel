@@ -7,27 +7,42 @@ include ./components/form-elements/radio-buttons/radio-buttons
 include ./components/form-elements/arrow-button/arrow-button
 include ./components/form-elements/toggle/toggle
 include ./components/form-elements/subscription-text-field/subscription-text-field
+include ./components/form-elements/like-button/like-button
+include ./components/form-elements/rate-button/rate-button
+
 doctype html
 html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        link(rel="stylesheet" href="main.css")
+        link(rel="stylesheet" href="./main.css")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
-        script(src="main.bundle.js")
         title TOXIN
     body
         img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
         .form-boxes
             .container
                 .text-field-wrapper
-                    +textField("Text field", "email", "Email", "")
+                    +textField("Text field", "email", "Email", "", true, false)
                 .text-field-wrapper
-                    +textField("Text field","text-field-focused", "", "This is pretty awesome")
+                    +textField("Text field","text-field-focused", "This is pretty awesome", "This is pretty awesome", true, false)
+                span.element-name dropdown
                 .dropdown-wrapper
-                    +dropdown("Dropdown","Сколько Гостей?", "dropdown-test", [1, 2, 3, "4"])
+                    +dropdown("Сколько Гостей?", "dropdown-test", ["Взрослые", "Дети", "Младенцы"])
+                .masked-text-field-wrapper
+                    +textField("Masked text field", "masked-text", "ДД.ММ.ГГГГ", "", true, true)
+                span.element-name date dropdown
+                .date-blocks
+                    .date-dropdown-wrapper
+                        +dropdown("ДД.ММ.ГГГГ", "date-dropdown", [1, 2, 3])
+                    span(style="margin-left:20px;")
+                    .date-dropdown-wrapper
+                        +dropdown("ДД.ММ.ГГГГ", "date-dropdown", [1, 2, 3])
+                span.element-name filter date dropdown
+                .filter-date-dropdown-wrapper
+                    +dropdown("19авг - 23авг", "filter-dropdown", [1, 2, 3])
                 .subscription-wrapper
                     +subscrText("subscription text field", "subscribe", "email")
             .container
@@ -39,14 +54,23 @@ html(lang="ru")
                         ])
                 .radiobox-wrapper
                     +radioBox("radio buttons", [
-                        {name: "gender", value: "men", nameText: "Мужчина"},
+                        {name: "gender", value: "men", nameText: "Мужчина", checked:true},
                         {name: "gender", value: "woman", nameText: "Женщина"}
                     ])
                 .toggle-wrapper
-                    +toggle("special", "Toggle", "Получать спрецпредложения")
+                    +toggle("special", "Toggle", "Получать спрецпредложения", false)
+                .toggle-wrapper
+                    +toggle("special-2", "", "Получать спрецпредложения", true)
+                span.element-name Like Button
+                .like-button-wrapper
+                    +likeBtn()
+                span.element-name Rate Button
+                .rate-button-wrapper
+                    +rateBtn({name: "rate_test"})
             .container
                 .button-wrapper
                     +btn("click me")
                     +ghostBtn("click me")
                 .arrow-button-wrapper
                     +arrButton("перейти к оплате")
+script(src="/main.bundle.js")
