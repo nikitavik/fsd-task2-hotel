@@ -1,8 +1,9 @@
-mixin toggle(name, tglName, tglLabel)
-    .toggle
+mixin toggle(name, tglName, tglText, checked)
+    form.toggle
         .toggle__name= tglName
-        label.toggle__label(for=name)= tglLabel
-            input.toggle__input(type="checkbox" id=name name=name)
+        label.toggle__item(for=name)
+            span.toggle__text= tglText
+            input.toggle__input(type="checkbox" id=name name=name checked=checked)
             .toggle__button
 
 

@@ -2,6 +2,25 @@
 .toggle{
   display: inline-block;
   vertical-align: top;
+  &__name{
+    margin-bottom: 16px;
+
+    font-weight: bold;
+    font-size: 12px;
+    line-height: (15/12);
+    text-transform: uppercase;
+  }
+  &__text{
+    margin-left: 10px;
+
+    font-size: 14px;
+    line-height: (24/14);
+    color: $DarkShade75;
+  }
+  &__item{
+    display: flex;
+    flex-direction: row-reverse;
+  }
   &__input{
     display: none;
   }
