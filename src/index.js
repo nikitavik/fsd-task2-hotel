@@ -19,5 +19,10 @@ import "/components/form-elements/toggle/toggle.scss"
 import "/components/form-elements/subscription-text-field/subscription-text-field.scss"
 import "/components/form-elements/like-button/like-button.scss"
 import "/components/form-elements/rate-button/rate-button.scss"
+import "/components/form-elements/range-slider/range-slider.scss"
+// js
 import "/components/form-elements/dropdown/dropdown.js"
 import "/components/form-elements/like-button/like-button.js"
+import "/components/form-elements/range-slider/range-slider.js"
+
+
