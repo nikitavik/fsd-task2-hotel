@@ -1,0 +1,20 @@
+@import "../../../styles/main";
+.rate-button{
+   transform: rotateY(180deg);
+  &__star:before{
+    content: "star_border";
+    background: $PrimaryGrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer ;
+  }
+  &__input{
+    display: none;
+  }
+  &__input:hover ~ &__star:before{
+    content: "star";
+  }
+  &__input:checked ~ &__star:before{
+    content: "star";
+  }
+}
