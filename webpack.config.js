@@ -7,7 +7,6 @@ const CopyPlugin = require("copy-webpack-plugin")
 const webpack = require("webpack");
 const PAGES_DIR = path.resolve(__dirname, "src")
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
-
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
@@ -26,7 +25,9 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
            $: "jquery",
-           jQueryL: 'jquery'
+           jQuery: "jquery",
+            "window.jQuery":"jquery",
+            "window.$": "jquery"
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -46,6 +47,10 @@ module.exports = {
     ],
     module: {
         rules: [
+            {
+                test: /\.css$/,
+                use: ["style-loader","css-loader"]
+            },
             {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader,
