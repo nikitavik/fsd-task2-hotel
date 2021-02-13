@@ -1,0 +1,10 @@
+mixin expandCheckbox(name, boxes)
+    form.expandable-checkbox(action="#" method="get")
+        span.expandable-checkbox__name= name
+        span.expandable-checkbox__marker.material-icons expand_more
+        .expandable-checkbox__list
+            for box in boxes
+                label.checkbox__item(for=box.name)
+                    input.checkbox__input(type="checkbox", id=box.name, name=box.name, value=box.value)
+                    .checkbox__mark
+                    span.checkbox__text= box.nameText
