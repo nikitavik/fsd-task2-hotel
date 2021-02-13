@@ -1,0 +1,25 @@
+@import "src/styles/main";
+.icon-text-list{
+    &__item{
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    &__icon{
+      background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__title{
+      margin-left: 10px;
+
+      font-size: 14px;
+      line-height: (24/14);
+      color: $DarkShade75;
+    }
+  &__text{
+    font-weight: bold;
+  }
+  &__hr{
+  }
+}
+.material-icons.md-48{font-size: 48px; line-height: (41/48);}
