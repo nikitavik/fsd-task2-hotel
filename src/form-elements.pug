@@ -15,6 +15,7 @@ include ./components/form-elements/pagination/pagination
 include ./components/form-elements/rich-checkbox/rich-checkbox
 include ./components/form-elements/bullet-list/bullet-list
 include ./components/form-elements/icon-text-list/icon-text-list
+include ./components/form-elements/expandable-checkbox/expandable-checkbox
 
 
 doctype html
@@ -99,6 +100,9 @@ html(lang="ru")
                 span.element-name pagination
                 .pagination-wrapper
                     +pagination()
+            .container
+                .expandable-checkbox
+                    +expandCheckbox("expandable checkbox list", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
             .container
                 .rick-checkbox-wrapper
                     +richCheckbox("rich checkbox buttons", [{name:"wide", nameText:"Широкий коридор", subText:"Ширина коридоров в номере не менее 91 см."},
