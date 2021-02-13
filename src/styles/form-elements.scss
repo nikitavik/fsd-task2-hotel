@@ -1,3 +1,4 @@
+
 body{
   max-width: 1920px;
   min-width: 320px;
@@ -5,6 +6,7 @@ body{
 .form-boxes{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   .container{
     display: flex;
     flex-direction: column;
@@ -56,3 +58,14 @@ body{
 .rate-button-wrapper{
   width: 120px;
 }
+.buttons-block{
+  max-width: 218px;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+.button-wrapper{
+   display: inline;
+   margin-bottom: 30px;
+ }

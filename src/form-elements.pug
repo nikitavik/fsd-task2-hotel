@@ -9,6 +9,13 @@ include ./components/form-elements/toggle/toggle
 include ./components/form-elements/subscription-text-field/subscription-text-field
 include ./components/form-elements/like-button/like-button
 include ./components/form-elements/rate-button/rate-button
+include ./components/form-elements/range-slider/range-slider
+include ./components/form-elements/borderless-button/borderless-button
+include ./components/form-elements/pagination/pagination
+include ./components/form-elements/rich-checkbox/rich-checkbox
+include ./components/form-elements/bullet-list/bullet-list
+include ./components/form-elements/icon-text-list/icon-text-list
+
 
 doctype html
 html(lang="ru")
@@ -16,7 +23,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        link(rel="stylesheet" href="./main.css")
+        link(rel="stylesheet" href="/main.css")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
         title TOXIN
@@ -68,9 +75,40 @@ html(lang="ru")
                 .rate-button-wrapper
                     +rateBtn({name: "rate_test"})
             .container
-                .button-wrapper
-                    +btn("click me")
-                    +ghostBtn("click me")
-                .arrow-button-wrapper
+                .range-slider-wrapper
+                    +rangeSlider("range slider")
+                span.element-name buttons
+                .buttons-block
+                    .button-wrapper
+                        +btn("click me")
+                    .button-wrapper
+                        +btn("click me")
+                .buttons-block
+                    .button-wrapper
+                        +ghostBtn("click me")
+                    .button-wrapper
+                        +ghostBtn("click me")
+                .buttons-block
+                    .button-wrapper
+                        +borderlessBtn("click me")
+                    .button-wrapper
+                        +borderlessBtn("click me")
+                    .button-wrapper
+                .arrow-button-wrapper.button-wrapper
                     +arrButton("перейти к оплате")
+                span.element-name pagination
+                .pagination-wrapper
+                    +pagination()
+            .container
+                .rick-checkbox-wrapper
+                    +richCheckbox("rich checkbox buttons", [{name:"wide", nameText:"Широкий коридор", subText:"Ширина коридоров в номере не менее 91 см."},
+                        {name:"invalid-sup", nameText:"Помощник для инвалидов", subText:"На 1 этаже вас встретит специалист и проводит до номера."}])
+            .container
+                span.element-name bullet list
+                .bullet-list-wrpapper
+                    +bulletList(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+            .container
+                .icon-text-list-wrapper
+                    +iconTextList([{icon: 'insert_emoticon', text:"Комфорт", subText: "Шумопоглощающие стены"},{icon: 'location_city', text:"Удобство", subText: "Окно в каждой из спален"}])
 script(src="/main.bundle.js")
+
