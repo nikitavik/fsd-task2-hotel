@@ -1,0 +1,12 @@
+@import "src/styles/main";
+.bullet-list{
+  &__item{
+    font-size: 14px;
+    line-height: (24/14);
+    color: $DarkShade75
+ }
+  &__item::marker{
+    color: rgba(31, 32, 65, 0.25);
+  }
+}
+// need to style marker's size
