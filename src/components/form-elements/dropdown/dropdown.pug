@@ -1,9 +1,22 @@
-mixin dropdown (labelText, text, name, options)
+include ../borderless-button/borderless-button
+mixin dropdown (text, name, options)
     form.dropdown(action="#" method="get")
-        label.dropdown__label(for=name)= labelText
-        .dropdown__input(id=name)
+        .dropdown__field(id=name)
             span.dropdown__text= text
             span(class="material-icons dropdown__expand") expand_more
-        //.dropdown__options
-        //    for option in options
-        //        .dropdown__option= option
+        .dropdown__options
+            for option in options
+                .dropdown__option
+                    span= option.opName
+                    .dropdown__option-buttons
+                        .dropdown__minus
+                            span.dropdown__sign -
+                        .dropdown__counter 0
+                        .dropdown__plus
+                            span.dropdown__sign +
+            .dropdown__buttons
+                .dropdown__confirm
+                    +borderlessBtn("применить")
+                .dropdown__clear
+                    +borderlessBtn("отчистить")
+

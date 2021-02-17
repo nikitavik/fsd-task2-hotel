@@ -1,7 +1,26 @@
-//header
-//    include ../logo/logo
-//    include ../nav-bar/nav
-//    include ../buttons/small-button/small-button
-//
-//    - const loginBtn = {text: "Войти"}
-//        +smallBtn(loginBtn)
+include ../form-elements/button/button
+include ../form-elements/ghost-button/ghost-button
+
+header.header
+    .logo-wrapper
+        include ../logo/logo
+    .nav-wrapper
+        nav.nav
+            ul.nav-list
+                li.nav-list__item
+                    a(href="/#") О нас
+                li.nav-list__item_with-arrow
+                    a Услуги
+                    span.material-icons
+                li.nav-list__item
+                    a Вакансии
+                li.nav-list__item
+                    a Новости
+                li.nav-list__item_with-arrow
+                    a Соглашения
+                    span.material-icons
+    .header-button-wrapper
+        +ghostBtn("Войти")
+    .header-ghost-button-wrapper
+        +btn("Зарегистрироваться")
+

@@ -3,17 +3,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  &__label{
-    font-weight: bold;
-    font-size: 12px;
-    line-height: (15/12);
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
-  &__input{
-    position: relative;
+  position: relative;
+  &__field{
     padding: 9px 0 9px 15px;
-
     box-sizing: border-box;
     border: 1px solid $DarkShade25;
     border-radius: 4px;
@@ -33,11 +25,91 @@
     bottom: 0;
     top: 25%;
     color: $DarkShade50;
+    cursor: pointer;
   }
   &__options{
+    display: none;
+    position: absolute;
+    top: 43px;
+    width: 100%;
+    z-index: 999;
+    overflow: auto;
     background: #FFFFFF;
     border: 1px solid $DarkShade50;
     box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
     box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  }
+}
+.dropdown__field.expand{
+  border-bottom-color: #FFFFFF;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid $DarkShade50;
+}
+
+
+// Options CSS
+.dropdown{
+  &__option{
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 7px 7px 15px;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 12px;
+    line-height: (15/12);
+    text-transform: uppercase;
+  }
+  &__option-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 92px;
+  }
+  &__plus{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $DarkShade50;
+    box-sizing: border-box;
+    border-radius: 22px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $DarkShade50;
+  }
+  &__minus{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $DarkShade25;
+    box-sizing: border-box;
+    border-radius: 22px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $DarkShade50;
+  }
+  &__counter{
+    display: inline-block;
+
+  }
+
+  &_buttons{
+    display: none;
+  }
+  &__confirm{
+    display: none;
+  }
+  &__clear{
+    display: none;
+  }
+  &__sign{vertical-align: middle}
+}
+// Functional CSS
+.dropdown{
+  .disabled{
+    border: 1px solid $DarkShade25;
   }
 }
