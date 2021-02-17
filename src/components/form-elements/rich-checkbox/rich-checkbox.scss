@@ -1,0 +1,67 @@
+@import "src/styles/main";
+.rich-checkbox{
+  &__name{
+    @include label-cta-text;
+    margin-bottom: 17px;
+  }
+  &__input{
+    display: none;
+  }
+  &__text-field{
+    max-width: 236px;
+    display: flex;
+    flex-flow: column;
+  }
+  &__text{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: (18/14);
+    color: $DarkShade75;
+    margin-bottom: 5px;
+  }
+  &__subtext{
+    font-size: 12px;
+    line-height: (14/12);
+    color:$DarkShade50;
+  }
+  &__item{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__mark{
+    position: relative;
+    display: inline-block;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  &__input:checked + &__mark{
+    border: 1px solid $Purple;
+
+  }
+  &__input:checked + &__mark:after{
+    display: block;
+    left: 6.5px;
+    top: 3.5px;
+    width: 6px;
+    height: 8.5px;
+    border: solid;
+    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-image-slice: 1;
+    border-width: 0 2.5px 2.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

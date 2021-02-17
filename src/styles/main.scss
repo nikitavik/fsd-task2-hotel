@@ -1,8 +1,11 @@
 $DarkShade: #1F2041;
 $DarkShade75: rgba(31, 32, 65, 0.75);
+$DarkShade50: rgba(31, 32, 65, 0.5);
 $DarkShade25: rgba(31, 32, 65, 0.25);
+$DarkShade5: rgba(31, 32, 65, 0.05);
 $Purple: #BC9CFF;
 $Green: #6FCF97;
+$PrimaryGrad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $Montserrat: 'Montserrat', sans-serif;
 @mixin sub-section{
   font-weight: bold;
@@ -25,4 +28,7 @@ $Montserrat: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.71;
   color: $DarkShade75;
+}
+body{
+  font-family: $Montserrat;
 }

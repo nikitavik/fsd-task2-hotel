@@ -1,0 +1,10 @@
+mixin richCheckbox(checkboxName, boxes)
+    form.rich-checkbox(action="#" method="get")
+        .rich-checkbox__name= checkboxName
+        for box in boxes
+            label.rich-checkbox__item(for=box.name)
+                input.rich-checkbox__input(type="checkbox", id=box.name, name=box.name, value=box.value)
+                .rich-checkbox__mark
+                .rich-checkbox__text-field
+                    span.rich-checkbox__text= box.nameText
+                    span.rich-checkbox__subtext= box.subText

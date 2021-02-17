@@ -1,0 +1,23 @@
+@import "src/styles/main";
+.regular-button{
+  display: inline-block;
+  padding: 14px 21px 15px 19px;
+  border-radius: 22px;
+  outline:none;
+  border: none;
+
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: (15 / 12);
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    opacity: 0.5;
+  }
+}

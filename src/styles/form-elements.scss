@@ -1,0 +1,71 @@
+
+body{
+  max-width: 1920px;
+  min-width: 320px;
+}
+.form-boxes{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    .element-name{
+      margin-bottom: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: (14,63/12);
+      text-transform: uppercase;
+    }
+  }
+}
+.text-field-wrapper{
+  width: 320px;
+}
+.arrow-button-wrapper{
+  width: 320px;
+}
+.dropdown-wrapper{
+  width: 320px;
+}
+.masked-text-field-wrapper{
+  width: 320px;
+}
+.date-blocks{
+  display: flex;
+  width: 320px;
+.date-dropdown-wrapper{
+  width: 150px;
+  }
+}
+.filter-date-dropdown-wrapper{
+  width: 266px;
+}
+.subscription-wrapper{
+  width: 267px;
+  height: 64px;
+}
+.checkbox-wrapper{
+  width: 222px;
+}
+.radiobox-wrapper{
+    width: 220px;
+}
+.like-button-wrapper{
+  width: 40px;
+}
+.rate-button-wrapper{
+  width: 120px;
+}
+.buttons-block{
+  max-width: 218px;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+.button-wrapper{
+   display: inline;
+   margin-bottom: 30px;
+ }

@@ -1,0 +1,7 @@
+mixin subscrText(name,text, placeholder)
+        form.subscription-field(action="#" method="get")
+            span.subscription-field__text= text
+            label.subscription-field__label(for=name)
+                input.subscription-field__input(type="email" id=name name=name placeholder=placeholder)
+                button(type="hidden").subscription-field__submit
+                span.material-icons(class="subscription-field__arrow")= "arrow_forward"

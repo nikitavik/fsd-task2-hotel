@@ -1,0 +1,13 @@
+@import "src/styles/main";
+
+.borderless-button{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: (15/12);
+  text-transform: uppercase;
+  color: $Purple;
+  background: #FFFFFF;
+}
+.borderless-button:hover{
+  color: $DarkShade50;
+}

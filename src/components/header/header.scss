@@ -1,0 +1,40 @@
+@import "src/styles/main";
+.header{
+  display: grid;
+  grid-template-columns: 140px 446px 87px 196px;
+  position: fixed;
+  width: 100%;
+  min-height: 70px;
+
+  align-content: center;
+  justify-content: center;
+
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px $DarkShade5;
+  .logo-wrapper{
+    align-self: center;
+  }
+  .nav-wrapper{
+    align-self: center;
+    .nav{
+
+      .nav-list{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        .nav-list__item{
+          display: inline;
+        }
+        .nav-list__item_with-arrow{
+          display: inline;
+        }
+      }
+    }
+  }
+  .header-button-wrapper{
+    align-self: center;
+  }
+  .header-ghost-button-wrapper{
+    align-self: center;
+  }
+}

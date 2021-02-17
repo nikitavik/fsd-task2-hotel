@@ -2,34 +2,37 @@ const path =require("path")
 const fs = require("fs")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
-const miniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
+const webpack = require("webpack");
 const PAGES_DIR = path.resolve(__dirname, "src")
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
-
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main: "./index.js",
+        main: "/index.js",
     },
+    devtool: false,
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: '/dist',
     },
     devServer: {
-        overlay: true
+        overlay: true,
     },
     plugins: [
-        // new HTMLWebpackPlugin({
-        //     template: "index.pug",
-        //     inject: true,
-        // }),
+        new webpack.ProvidePlugin({
+           $: "jquery",
+           jQuery: "jquery",
+            "window.jQuery":"jquery",
+            "window.$": "jquery"
+        }),
         new CleanWebpackPlugin(),
-        new miniCssExtractPlugin({
-            filename: "[name].css"
-
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css",
         }),
         new CopyPlugin({
             patterns: [
@@ -45,12 +48,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: [miniCssExtractPlugin.loader , "css-loader", "sass-loader"]
+                test: /\.css$/,
+                use: ["style-loader","css-loader"]
             },
             {
-                test: /\.css$/,
-                use: ["css-loader"]
+                test: /\.scss$/,
+                use: [MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"]
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,

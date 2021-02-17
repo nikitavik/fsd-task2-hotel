@@ -1,0 +1,19 @@
+.expandable-checkbox{
+  &__name{
+    vertical-align: super;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: (15/12);
+    text-transform: uppercase;
+  }
+  &__marker{
+    padding-left: 30px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+  }
+  &__list{
+    position: absolute;
+  }
+
+}
