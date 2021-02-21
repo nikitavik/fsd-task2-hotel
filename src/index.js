@@ -1,12 +1,16 @@
 import "/styles/reset.scss"
 import "/styles/main.scss"
 import "/styles/index.scss"
+import "/styles/cards.scss"
 import "/styles/form-elements.scss"
 import "/styles/colors-and-types.scss"
 import "/components/logo/logo.scss"
 import "/components/header/header.scss"
 import "/components/colors-and-types/color-block/color-block.scss"
 import "/components/colors-and-types/type-block/type-block.scss"
+
+// form element's css
+
 import "/components/form-elements/text-field/text-field.scss"
 import "/components/form-elements/button/button.scss"
 import "/components/form-elements/ghost-button/ghost-button.scss"
@@ -26,6 +30,10 @@ import "/components/form-elements/rich-checkbox/rich-checkbox.scss"
 import "/components/form-elements/bullet-list/bullet-list.scss"
 import "/components/form-elements/icon-text-list/icon-text-list.scss"
 import "/components/form-elements/expandable-checkbox/expandable-checkbox.scss"
+import "/components/form-elements/date-dropdown/date-dropdown.scss"
+
+// cards css
+import "/components/cards/search-card/search-card.scss"
 
 
 // js
@@ -34,6 +42,7 @@ import "/components/form-elements/like-button/like-button.js"
 import "/components/form-elements/range-slider/range-slider.js"
 import "/components/form-elements/pagination/pagination.js"
 import "/components/form-elements/expandable-checkbox/expandable-checkbox.js"
+import "/components/form-elements/date-dropdown/date-dropdown.js"
 
 
 
