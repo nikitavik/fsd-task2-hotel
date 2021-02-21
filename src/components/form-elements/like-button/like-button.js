@@ -1,5 +1,8 @@
-let counter = $(".like-button__text").html()
+
 $(document).ready(function (){
+    const btnTxt  = $(".like-button__text")
+    let counter = btnTxt.html()
+
     $(".like-button__label").click(function (){
         if ($(this).hasClass("liked")) {
             $(this).removeClass("liked")
@@ -14,6 +17,6 @@ $(document).ready(function (){
             $(".like-button__text").addClass("liked")
             counter = parseInt(counter) + 1
         }
-        $(".like-button__text").html(counter)
+        btnTxt.html(counter)
     })
 })
