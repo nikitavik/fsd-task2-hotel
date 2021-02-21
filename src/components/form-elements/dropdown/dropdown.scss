@@ -78,6 +78,7 @@
     line-height: 22px;
     text-align: center;
     color: $DarkShade50;
+    cursor: pointer;
   }
   &__minus{
     display: inline-block;
@@ -90,20 +91,23 @@
     line-height: 22px;
     text-align: center;
     color: $DarkShade50;
+    cursor: pointer;
   }
   &__counter{
     display: inline-block;
 
   }
 
-  &_buttons{
-    display: none;
+  &__buttons{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
   }
   &__confirm{
-    display: none;
+    margin: 0 7px 4px 0;
   }
   &__clear{
-    display: none;
+    margin-left: 14px;
   }
   &__sign{vertical-align: middle}
 }
@@ -111,5 +115,8 @@
 .dropdown{
   .disabled{
     border: 1px solid $DarkShade25;
+  }
+  .killed{
+    display: none;
   }
 }

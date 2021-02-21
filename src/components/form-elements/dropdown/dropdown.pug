@@ -8,15 +8,15 @@ mixin dropdown (text, name, options)
             for option in options
                 .dropdown__option
                     span= option.opName
-                    .dropdown__option-buttons
-                        .dropdown__minus
+                    .dropdown__option-buttons(class=option.op)
+                        .dropdown__minus(class=option.op)
                             span.dropdown__sign -
-                        .dropdown__counter 0
+                        .dropdown__counter(class=option.op) 0
                         .dropdown__plus
-                            span.dropdown__sign +
+                            span.dropdown__sign(class=option.op) +
             .dropdown__buttons
                 .dropdown__confirm
-                    +borderlessBtn("применить")
+                    +borderlessBtn("применить", "d-confirm")
                 .dropdown__clear
-                    +borderlessBtn("отчистить")
+                    +borderlessBtn("отчистить", "d-clear killed")
 
