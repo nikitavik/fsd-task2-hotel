@@ -7,6 +7,8 @@ const CopyPlugin = require("copy-webpack-plugin")
 const webpack = require("webpack");
 const PAGES_DIR = path.resolve(__dirname, "src")
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const Inputmask = require('inputmask')
+
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
