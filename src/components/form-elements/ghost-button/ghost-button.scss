@@ -21,7 +21,6 @@
   $border: 2px;
   background-clip: padding-box;
   border: inset $border transparent;
-
   &::before {
     content: '';
     position: absolute;
