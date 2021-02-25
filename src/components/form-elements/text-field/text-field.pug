@@ -1,4 +1,3 @@
-mixin textField (labelText, name, placeholder, value, required, masked)
-        form.text-field(action="#" method="get")
-            label.text-field__label(for=name)= labelText
-            input.text-field__input(type="text" placeholder=placeholder name=name id=name value=value required=required masked=masked)
+mixin textField (fieldClass, placeholder, name, value, required)
+        .text-field
+            input.text-field__input(class=fieldClass type="text" placeholder=placeholder name=name  value=value required=required)

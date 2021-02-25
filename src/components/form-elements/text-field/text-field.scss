@@ -2,13 +2,6 @@
 .text-field{
   display: flex;
   flex-flow: column;
-  &__label{
-    margin-bottom: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: (14,63/12);
-    text-transform: uppercase;
-  }
   &__input{
     box-sizing: border-box;
     padding: 13px 15px 13px 15px;
