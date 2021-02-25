@@ -1,0 +1,5 @@
+mixin dateDropdown (text, name)
+    form.date-dropdown(action="#" method="get")
+        .date-dropdown__field(id=name)
+            span.dropdown__text= text
+            span(class="material-icons date-dropdown__expand") expand_more
