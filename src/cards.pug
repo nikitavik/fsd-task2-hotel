@@ -8,10 +8,15 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
         title TOXIN
-    body
+    body.gray-back
+        include components/header/header
         .container
             .search-card-wrapper.card-wrapper
                 include components/cards/search-card/search-card
-            .registration-card-card-wrapper.card-wrapper
+            .registration-card-wrapper.card-wrapper
                 include components/cards/registration/registration
+            .login-card-wrapper.card-wrapper
+                include components/cards/login-card/login-card
+            .booking-card-wrapper.card-wrapper
+                include components/cards/booking-card/booking-card
 script(src="/main.bundle.js")
