@@ -4,8 +4,11 @@ import "/styles/index.scss"
 import "/styles/cards.scss"
 import "/styles/form-elements.scss"
 import "/styles/colors-and-types.scss"
+import "/styles/layout.scss"
+import "/styles/landing-page.scss"
 import "/components/logo/logo.scss"
 import "/components/header/header.scss"
+import "/components/footer/footer.scss"
 import "/components/colors-and-types/color-block/color-block.scss"
 import "/components/colors-and-types/type-block/type-block.scss"
 
@@ -36,6 +39,8 @@ import "/components/form-elements/masked-text-field/masked-text-field.scss"
 // cards css
 import "/components/cards/search-card/search-card.scss"
 import "/components/cards/registration/registration.scss"
+import "/components/cards/login-card/login-card.scss"
+import "/components/cards/booking-card/booking-card.scss"
 
 
 // js
@@ -46,6 +51,8 @@ import "/components/form-elements/pagination/pagination.js"
 import "/components/form-elements/expandable-checkbox/expandable-checkbox.js"
 import "/components/form-elements/date-dropdown/date-dropdown.js"
 import "/components/form-elements/masked-text-field/masked-text-field.js"
+
+
 
 
 
