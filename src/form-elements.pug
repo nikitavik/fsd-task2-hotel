@@ -16,6 +16,8 @@ include ./components/form-elements/rich-checkbox/rich-checkbox
 include ./components/form-elements/bullet-list/bullet-list
 include ./components/form-elements/icon-text-list/icon-text-list
 include ./components/form-elements/expandable-checkbox/expandable-checkbox
+include ./components/form-elements/date-dropdown/date-dropdown
+include ./components/form-elements/masked-text-field/masked-text-field
 
 
 doctype html
@@ -32,24 +34,29 @@ html(lang="ru")
         img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
         .form-boxes
             .container
+                span.element-name Text field
                 .text-field-wrapper
-                    +textField("Text field", "email", "Email", "", true, false)
+                    +textField("email", "Email", "", true, false)
+                span.element-name Text field
                 .text-field-wrapper
-                    +textField("Text field","text-field-focused", "This is pretty awesome", "This is pretty awesome", true, false)
+                    +textField("text-field-focused", "This is pretty awesome", "This is pretty awesome", true, false)
                 span.element-name dropdown
                 .dropdown-wrapper
-                    +dropdown("Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", opId:""},{opName:"Дети", opId:""},{opName:"Младенцы", opId:""}])
+                    +dropdown("Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", op:"adult"},{opName:"Дети", op:"children"},{opName:"Младенцы", op:"toddler"}])
+                span.element-name Masked text field
                 .masked-text-field-wrapper
-                    +textField("Masked text field", "masked-text", "ДД.ММ.ГГГГ", "", true, true)
+                    +maskedField("masked-test", "ДД.ММ.ГГГГ","test", "", true)
                 span.element-name date dropdown
                 .date-blocks
                     .date-dropdown-wrapper
+                        +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
                     span(style="margin-left:20px;")
                     .date-dropdown-wrapper
+                        +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
                 span.element-name filter date dropdown
                 .filter-date-dropdown-wrapper
                 .subscription-wrapper
-                    +subscrText("subscription text field", "subscribe", "email")
+                    +subscrText("subscription text field", "email")
             .container
                 .checkbox-wrapper
                     +checkBox("checkbox buttons", [
@@ -57,15 +64,17 @@ html(lang="ru")
                         {name: "animals", value: "withAnimals", nameText: "Можно с питомцами"},
                         {name:"guests", value: "guestsAllowed" , nameText: "Можно пригласить гостей (до 10 человек)"}
                         ])
+                span.element-name Radio buttons
                 .radiobox-wrapper
-                    +radioBox("radio buttons", [
+                    +radioBox([
                         {name: "gender", value: "men", nameText: "Мужчина", checked:true},
                         {name: "gender", value: "woman", nameText: "Женщина"}
                     ])
+                span.element-name Toggle
                 .toggle-wrapper
-                    +toggle("special", "Toggle", "Получать спрецпредложения", false)
+                    +toggle("special", "Получать спрецпредложения", false)
                 .toggle-wrapper
-                    +toggle("special-2", "", "Получать спрецпредложения", true)
+                    +toggle("special-2", "Получать спрецпредложения", true)
                 span.element-name Like Button
                 .like-button-wrapper
                     +likeBtn()
@@ -83,9 +92,9 @@ html(lang="ru")
                         +btn("click me")
                 .buttons-block
                     .button-wrapper
-                        +ghostBtn("click me")
+                        +ghostBtn("click me", "test-ghost")
                     .button-wrapper
-                        +ghostBtn("click me")
+                        +ghostBtn("click me", "test-ghost")
                 .buttons-block
                     .button-wrapper
                         +borderlessBtn("click me")
