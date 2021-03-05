@@ -1,13 +1,12 @@
 @import "src/styles/main";
 .dropdown{
-  display: flex;
-  flex-direction: column;
   width: 100%;
   position: relative;
+  max-width: 320px;
   &__field{
-    padding: 9px 0 9px 15px;
-    box-sizing: border-box;
-    border: 1px solid $DarkShade25;
+    display: flex;
+    padding: 13px 40px 13px 15px;
+    border: 1px solid $DarkShade50;
     border-radius: 4px;
     background: #FFFFFF;
     cursor: pointer;
@@ -37,7 +36,6 @@
     overflow: auto;
     background: #FFFFFF;
     border: 1px solid $DarkShade50;
-    box-sizing: border-box;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   }
