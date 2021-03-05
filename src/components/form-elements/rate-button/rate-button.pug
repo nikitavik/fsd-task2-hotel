@@ -1,13 +1,16 @@
-mixin rateBtn(radio)
+mixin rateBtn(radio, action)
+    form.rate-button(action=action method="get")
+        input.rate-button__input(type="radio" name=radio id=`star5-${radio}` value="rate5")
+        label.rate-button__star.material-icons(for=`star5-${radio}`)
 
-    form.rate-button(action="#" method="get")
-        input.rate-button__input(type="radio" name=radio.name id="star5" value="rate5")
-        label.rate-button__star(for="star5" class="material-icons")
-        input.rate-button__input(type="radio" name=radio.name id="star4" value="rate4")
-        label.rate-button__star(for="star4" class="material-icons")
-        input.rate-button__input(type="radio" name=radio.name id="star3" value="rate3")
-        label.rate-button__star(for="star3" class="material-icons")
-        input.rate-button__input(type="radio" name=radio.name id="star2" value="rate2")
-        label.rate-button__star(for="star2" class="material-icons")
-        input.rate-button__input(type="radio" name=radio.name id="star1" value="rate1")
-        label.rate-button__star(for="star1" class="material-icons")
+        input.rate-button__input(type="radio" name=radio id=`star4-${radio}` value="rate4")
+        label.rate-button__star.material-icons(for=`star4-${radio}`)
+
+        input.rate-button__input(type="radio" name=radio id=`star3-${radio}` value="rate3")
+        label.rate-button__star.material-icons(for=`star3-${radio}`)
+
+        input.rate-button__input(type="radio" name=radio id=`star2-${radio}` value="rate2")
+        label.rate-button__star.material-icons(for=`star2-${radio}`)
+
+        input.rate-button__input(type="radio" name=radio id=`star1-${radio}` value="rate1")
+        label.rate-button__star.material-icons(for=`star1-${radio}`)
