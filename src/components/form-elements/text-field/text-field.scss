@@ -1,10 +1,10 @@
 @import "../../../styles/main";
 .text-field{
-  display: flex;
-  flex-flow: column;
+  max-width: 320px;
+  width: 100%;
   &__input{
     box-sizing: border-box;
-    padding: 13px 15px 13px 15px;
+    padding: 13px 15px;
     max-height: 44px;
     width: 100%;
     background: #FFFFFF;
@@ -12,7 +12,7 @@
     border: 1px solid $DarkShade25;
     border-radius: 4px;
     font-size: 14px;
-    line-height: (24/14);
+    line-height: (18/14);
     &::placeholder{
       color: $DarkShade25;
     }

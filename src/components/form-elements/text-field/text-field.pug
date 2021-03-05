@@ -1,3 +1,10 @@
-mixin textField (fieldClass, placeholder, name, value, required)
+mixin textField (type, fieldClass, placeholder, form, name, value, required)
         .text-field
-            input.text-field__input(class=fieldClass type="text" placeholder=placeholder name=name  value=value required=required)
+            input.text-field__input(
+                type= type
+                class=fieldClass
+                form=form
+                placeholder=placeholder
+                name=name
+                value=value
+                required=required)
