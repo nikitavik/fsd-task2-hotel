@@ -4,8 +4,8 @@
   position: relative;
   max-width: 320px;
   &__field{
-    display: flex;
-    padding: 13px 40px 13px 15px;
+    width: 100% ;
+    padding: 9px 45px 9px 15px;
     border: 1px solid $DarkShade50;
     border-radius: 4px;
     background: #FFFFFF;
@@ -17,13 +17,13 @@
     color: $DarkShade75;
   }
   &__expand{
-    text-align: center;
     position: absolute;
-    width: 44px;
-    height: 44px;
+
+    min-width: 44px;
+    min-height: 44px;
+
     right: 0;
-    bottom: 0;
-    top: 25%;
+
     color: $DarkShade50;
     cursor: pointer;
   }

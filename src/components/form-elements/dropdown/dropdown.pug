@@ -1,7 +1,7 @@
 include ../borderless-button/borderless-button
 mixin dropdown (form,text, name, options)
     .dropdown
-        .dropdown__field(id=name)
+        .dropdown__field
             span.dropdown__text= text
             span(class="material-icons dropdown__expand") expand_more
         .dropdown__options
