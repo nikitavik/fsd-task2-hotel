@@ -1,19 +1,14 @@
 @import "src/styles/main";
 .subscription-field{
+  position: relative;
   width: 100%;
-  &__label{
+  max-width: 320px;
+  &__input{
+    width: 100%;
     padding: 11px 0 11px 15px;
     background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $DarkShade25;
     border-radius: 4px;
-  }
-  &__text{
-    display: block;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: (15/12);
-    margin-bottom: 5px;
-    text-transform: uppercase;
   }
   &__input{
     &::placeholder{
@@ -24,12 +19,15 @@
   }
   }
   &__arrow{
-    position: relative;
+    position: absolute;
     display: inline-block;
-    width: 44px;
-    height: 44px;
-    top: 7px;
-    right: -7px;
+
+    min-width: 44px;
+    min-height: 44px;
+
+    top: 2px;
+    right: 2px;
+
     background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
