@@ -1,17 +1,16 @@
 @import "src/styles/main";
 .arrow-button{
-  &__input{
+  width: 100%;
+  max-width: 320px;
+  &__button{
     position: relative;
 
     width: 100%;
-    max-width: 320px;
     padding: 14px 20px 15px;
-    text-align: center  ;
 
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryGrad;
     border-radius: 22px;
 
-    font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: (15/12);
@@ -19,11 +18,12 @@
     color: #FFFFFF;
   }
   &__arrow{
-    position:absolute ;
-    width: 44px;
-    height: 44px;
+    position:absolute;
+    min-width: 44px;
+    min-height: 44px;
     top: 10px;
     right: 0;
+
     color: #FFFFFF;
   }
 }
