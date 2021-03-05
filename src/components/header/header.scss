@@ -1,40 +1,80 @@
 @import "src/styles/main";
 .header{
-  display: grid;
-  grid-template-columns: 140px 446px 87px 196px;
   position: fixed;
-  width: 100%;
-  min-height: 70px;
 
-  align-content: center;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 0 140px;
+
+  min-height: 70px;
+  z-index: 99999;
 
   background: #FFFFFF;
   box-shadow: 0 10px 20px $DarkShade5;
-  .logo-wrapper{
-    align-self: center;
+  .header-menu{
+    display: none;
+    color: $DarkShade50;
   }
-  .nav-wrapper{
-    align-self: center;
-    .nav{
+  .logo-wrapper{
+    padding-right: 20px;
+  }
 
+// nav style
+
+  .nav-wrapper{
+    display: inline-flex;
+    align-items: center;
+    .nav{
       .nav-list{
+        display: flex;
           list-style-type: none;
           margin: 0;
           padding: 0;
         .nav-list__item{
+          padding-right: 20px;
           display: inline;
+
+          font-size: 14px;
+          line-height: (17/14);
+          color: $DarkShade50;
         }
         .nav-list__item_with-arrow{
+          position: relative;
           display: inline;
+          padding-right: 44px;
+
+          font-size: 14px;
+          line-height: (17/14);
+          color: $DarkShade50;
+        }
+        .nav-list__mark{
+          position: absolute;
+          font-size: 24px;
+          line-height: (20/24);
+          color: $DarkShade50;
+        }
+        .nav-list__text{
+          white-space: nowrap;
         }
       }
     }
   }
+  // buttons style
+  .header-buttons-block{
+    //display: inline-block;
+    display: inline-flex;
+    flex-flow: nowrap;
+  }
   .header-button-wrapper{
-    align-self: center;
+    display: inline-block;
   }
   .header-ghost-button-wrapper{
-    align-self: center;
+    padding-left: 20px;
+    display: inline-block;
   }
 }
+
+//functional css
