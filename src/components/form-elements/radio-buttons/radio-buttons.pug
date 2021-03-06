@@ -1,9 +1,8 @@
-mixin radioBox(radioName,boxes)
-    form.radiobox(action="#" method="get")
-        .radiobox__title= radioName
+mixin radioBox(boxes, form)
+    .radiobox
         .radiobox__items
             for box in boxes
                 label.radiobox__item(for=box.value)
-                    input.radiobox__input(type="radio", id=box.value, name=box.name, value=box.value, checked=box.checked)
+                    input.radiobox__input(form=from type="radio" id=box.value name=box.name value=box.value checked=box.checked)
                     .radiobox__mark
                     span.radiobox__name= box.nameText
