@@ -1,14 +1,11 @@
 @import "src/styles/main";
 .regular-button{
-  display: inline-block;
   padding: 14px 21px 15px 19px;
   border-radius: 22px;
-  outline:none;
-  border: none;
+  width: 100% ;
 
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $PrimaryGrad;
 
-  font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: (15 / 12);
