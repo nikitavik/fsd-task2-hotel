@@ -1,4 +1,6 @@
 mixin bulletList(list)
     ul.bullet-list
         for item in list
-            li.bullet-list__item= item
+            li.bullet-list__item
+                span.bullet-list__marker
+                span.bullet-list__text= item
