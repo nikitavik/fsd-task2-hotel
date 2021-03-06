@@ -1,14 +1,10 @@
 @import "src/styles/main";
 .ghost-button{
   position: relative;
-  box-sizing: border-box;
   padding: 11px 18px 12px;
   border-radius: 22px;
-  outline: none;
-  // gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 
-  font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: (14,63/12);
