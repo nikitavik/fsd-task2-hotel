@@ -1,3 +1,3 @@
-mixin maskedField (fieldClass, placeholder, name, value, required)
+mixin maskedField (form, fieldClass, placeholder, name, value, required)
     .masked-text-field
-        input.masked-text-field__input(class=fieldClass type="text" placeholder=placeholder name=name  value=value required=required)
+        input.masked-text-field__input(form= form class=fieldClass type="text" placeholder=placeholder name=name  value=value required=required)

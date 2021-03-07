@@ -1,9 +1,8 @@
 @import "../../../styles/main";
 .masked-text-field{
-  display: flex;
-  flex-flow: column;
+  width: 100%;
+  max-width: 320px;
   &__input{
-    box-sizing: border-box;
     padding: 13px 15px 13px 15px;
     max-height: 44px;
     width: 100%;
@@ -13,6 +12,8 @@
     border-radius: 4px;
     font-size: 14px;
     line-height: (24/14);
+    text-transform: capitalize;
+
     &::placeholder{
       color: $DarkShade25;
     }
