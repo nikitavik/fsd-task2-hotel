@@ -1,5 +1,5 @@
-mixin checkBox(checkboxName,boxes)
-    form.checkbox(action="#" method="get")
+mixin checkBox(action, checkboxName, boxes)
+    form.checkbox(action=action)
         .checkbox__name= checkboxName
         for box in boxes
             label.checkbox__item(for=box.name)
