@@ -1,6 +1,8 @@
-mixin rangeSlider(name)
-    .range-slider
+mixin rangeSlider(name, action)
+    form.range-slider(action= action)
         .range-slider__title
             span.range-slider__name= name
             span.range-slider__values
+            input.range-slider__min(type="hidden" name=`${name}-min` value="0")
+            input.range-slider__max(type="hidden" name=`${name}-max` value="0")
         .range-slider__slider
