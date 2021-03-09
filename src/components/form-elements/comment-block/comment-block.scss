@@ -1,0 +1,38 @@
+@import "src/styles/main";
+
+.comment-block{
+  width: 100%;
+  max-width: 710px;
+  &-header{
+    display: flex;
+    &__image{
+      max-width: 48px;
+    }
+    .img{
+
+    }
+    &__title{
+      font-size: 14px;
+      line-height: (24/14);
+      color: $DarkShade75;
+    }
+    &__name{
+      font-weight: bold;
+    }
+    &__time{
+
+    }
+  }
+  &-body{
+    display: flex;
+    &__like{
+      min-width: 48px;
+    }
+    &__text{
+
+      font-size: 14px;
+      line-height: (24/14);
+      color: $DarkShade75;
+    }
+  }
+}
