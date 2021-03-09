@@ -1,25 +1,30 @@
 @import "src/styles/main";
-body{
-  font-family: $Montserrat;
-}
-.logo-container{
-  margin: 30px 72px 67px 30px;
-}
-.color-types-container{
-  display: flex;
-  justify-content: space-around;
-  .color-container{
-    max-width: 282px;
-    height: 610px;
+.colors-types{
+  &-container{
+    max-width: 1920px;
+    min-width: 320px;
+    padding: 140px;
+
     display: flex;
-    flex-direction: column;
+    flex-flow: row;
     justify-content: space-between;
   }
-  .type-container{
-    display: flex;
-    flex-direction: column;
-    width: 436px;
-    height: 321px;
-    justify-content: space-between;
+
+  &-logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+}
+.colors-container{
+  max-width: 282px;
+  .color-wrapper{
+    padding-bottom: 20px;
+  }
+}
+.types-container{
+  max-width: 436px;
+  .type-wrapper{
+    padding-bottom: 50px;
   }
 }

@@ -11,19 +11,30 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
         title TOXIN
     body
-    .logo-container
-        img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
-    .color-types-container
-        .color-container
-            +colorBox("Dark Shade 100%", "#1F2041", "ds100")
-            +colorBox("Dark Shade 75%", "#1F2041", "ds75")
-            +colorBox("Dark Shade 50%", "#1F2041", "ds50")
-            +colorBox("Dark Shade 25%", "#1F2041", "ds25")
-            +colorBox("Dark Shade 5%", "#1F2041", "ds5")
-            +colorBox("Purple", "#BC9CFF", "purple")
-            +colorBox("Green", "#6FCF97", "green")
-        .type-container
-            +typeBox("H1", "This one is the sub-section or widget title", "sub-section")
-            +typeBox("H2", "Next one is the item title inside widgets", "widget-title")
-            +typeBox("H3", "This is a label or CTA text", "label-cta-text" )
-            +typeBox("Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.", "body-text")
+        .colors-types-container
+            .colors-types-logo
+                img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
+            .colors-container
+                .color-wrapper
+                    +colorBox("Dark Shade 100%", "#1F2041", "ds100")
+                .color-wrapper
+                    +colorBox("Dark Shade 75%", "#1F2041", "ds75")
+                .color-wrapper
+                    +colorBox("Dark Shade 50%", "#1F2041", "ds50")
+                .color-wrapper
+                    +colorBox("Dark Shade 25%", "#1F2041", "ds25")
+                .color-wrapper
+                    +colorBox("Dark Shade 5%", "#1F2041", "ds5")
+                .color-wrapper
+                    +colorBox("Purple", "#BC9CFF", "purple")
+                .color-wrapper
+                    +colorBox("Green", "#6FCF97", "green")
+            .types-container
+                .type-wrapper
+                    +typeBox("H1", "This one is the sub-section or widget title", "sub-section")
+                .type-wrapper
+                    +typeBox("H2", "Next one is the item title inside widgets", "widget-title")
+                .type-wrapper
+                    +typeBox("H3", "This is a label or CTA text", "label-cta-text" )
+                .type-wrapper
+                    +typeBox("Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.", "body-text")
