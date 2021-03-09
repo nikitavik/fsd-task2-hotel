@@ -1,5 +1,5 @@
-mixin richCheckbox(checkboxName, boxes)
-    form.rich-checkbox(action="#" method="get")
+mixin richCheckbox(action, checkboxName, boxes)
+    form.rich-checkbox(action=action method="get")
         .rich-checkbox__name= checkboxName
         for box in boxes
             label.rich-checkbox__item(for=box.name)
