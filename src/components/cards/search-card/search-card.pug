@@ -14,6 +14,6 @@ include ../../form-elements/date-dropdown/date-dropdown
     .search-card__guests
         .search-card__guests-title Гости
         .search-card__guests-dropdown
-            +dropdown("Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", opId:""},{opName:"Дети", opId:""},{opName:"Младенцы", opId:""}])
+            +dropdown("search-form","Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", op:"adult"},{opName:"Дети", op:"children"},{opName:"Младенцы", op:"toddler"}])
     .search-card__button
         +arrButton("Подобрать номер","search-room")
