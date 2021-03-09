@@ -1,7 +1,9 @@
 require("paginationjs")
-$('.pagination-container').pagination({
-    dataSource: [1],
-    autoHidePrevious: true,
-    nextText: "",
-    prevText: "",
+$(document).ready(function () {
+    $('.pagination-container').pagination({
+        dataSource: [1],
+        autoHidePrevious: true,
+        nextText: "",
+        prevText: "",
+    })
 })
