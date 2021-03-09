@@ -18,6 +18,8 @@ include ./components/form-elements/icon-text-list/icon-text-list
 include ./components/form-elements/expandable-checkbox/expandable-checkbox
 include ./components/form-elements/date-dropdown/date-dropdown
 include ./components/form-elements/masked-text-field/masked-text-field
+include ./components/form-elements/comment-block/comment-block
+
 
 
 doctype html
@@ -31,94 +33,125 @@ html(lang="ru")
         link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
         title TOXIN
     body
-        img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
-        .form-boxes
-            .container
-                span.element-name Text field
-                .text-field-wrapper
-                    +textField("email", "Email", "", true, false)
-                span.element-name Text field
-                .text-field-wrapper
-                    +textField("text-field-focused", "This is pretty awesome", "This is pretty awesome", true, false)
-                span.element-name dropdown
-                .dropdown-wrapper
-                    +dropdown("Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", op:"adult"},{opName:"Дети", op:"children"},{opName:"Младенцы", op:"toddler"}])
-                span.element-name Masked text field
-                .masked-text-field-wrapper
-                    +maskedField("masked-test", "ДД.ММ.ГГГГ","test", "", true)
-                span.element-name date dropdown
-                .date-blocks
-                    .date-dropdown-wrapper
-                        +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
-                    span(style="margin-left:20px;")
-                    .date-dropdown-wrapper
-                        +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
-                span.element-name filter date dropdown
-                .filter-date-dropdown-wrapper
-                .subscription-wrapper
-                    +subscrText("subscription text field", "email")
-            .container
-                .checkbox-wrapper
-                    +checkBox("checkbox buttons", [
-                        {name: "smoke",value: "canSmoke", nameText: "Можно курить"},
-                        {name: "animals", value: "withAnimals", nameText: "Можно с питомцами"},
-                        {name:"guests", value: "guestsAllowed" , nameText: "Можно пригласить гостей (до 10 человек)"}
-                        ])
-                span.element-name Radio buttons
-                .radiobox-wrapper
-                    +radioBox([
-                        {name: "gender", value: "men", nameText: "Мужчина", checked:true},
-                        {name: "gender", value: "woman", nameText: "Женщина"}
-                    ])
-                span.element-name Toggle
-                .toggle-wrapper
-                    +toggle("special", "Получать спрецпредложения", false)
-                .toggle-wrapper
-                    +toggle("special-2", "Получать спрецпредложения", true)
-                span.element-name Like Button
-                .like-button-wrapper
-                    +likeBtn()
-                span.element-name Rate Button
-                .rate-button-wrapper
-                    +rateBtn({name: "rate_test"})
-            .container
-                .range-slider-wrapper
-                    +rangeSlider("range slider")
-                span.element-name buttons
-                .buttons-block
-                    .button-wrapper
-                        +btn("click me")
-                    .button-wrapper
-                        +btn("click me")
-                .buttons-block
-                    .button-wrapper
-                        +ghostBtn("click me", "test-ghost")
-                    .button-wrapper
-                        +ghostBtn("click me", "test-ghost")
-                .buttons-block
-                    .button-wrapper
-                        +borderlessBtn("click me")
-                    .button-wrapper
-                        +borderlessBtn("click me")
-                    .button-wrapper
-                .arrow-button-wrapper.button-wrapper
-                    +arrButton("перейти к оплате")
-                span.element-name pagination
-                .pagination-wrapper
-                    +pagination()
-            .container
-                .expandable-checkbox
-                    +expandCheckbox("expandable checkbox list", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
-            .container
-                .rick-checkbox-wrapper
-                    +richCheckbox("rich checkbox buttons", [{name:"wide", nameText:"Широкий коридор", subText:"Ширина коридоров в номере не менее 91 см."},
-                        {name:"invalid-sup", nameText:"Помощник для инвалидов", subText:"На 1 этаже вас встретит специалист и проводит до номера."}])
-            .container
-                span.element-name bullet list
-                .bullet-list-wrpapper
-                    +bulletList(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-            .container
+        .form-elements-container
+            .form-elements-logo
+                img.gray-logo(src="/img/icon/logo-gray.png" alt="Logo")
+            // Box 1
+            .form-elements-box1
+                // Column 1
+                .form-elements-box1-column
+
+                    // Text inputs and dropdown
+
+                    span.element-name Text field
+                    .text-field-wrapper
+                        +textField("","text-field-test", "Email", "test-form", "text-test", "", true)
+                    span.element-name Text field
+                    .text-field-wrapper
+                        +textField("","text-field-test2", "This is pretty awesome", "test-form", "text-test2", "This is pretty awesome", true, )
+                    span.element-name dropdown
+                    .dropdown-wrapper
+                        +dropdown("test-form", "Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", op:"adult"},{opName:"Дети", op:"children"},{opName:"Младенцы", op:"toddler"}])
+                    span.element-name Masked text field
+                    .masked-text-field-wrapper
+                        +maskedField("test-form", "masked-test", "ДД.ММ.ГГГГ","test", "", true)
+                    span.element-name date dropdown
+
+                    // Date
+
+                    .date-blocks
+                        .date-dropdown-wrapper
+                            //+dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
+                        .date-dropdown-wrapper
+                            //+dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
+                    span.element-name filter date dropdown
+                    .filter-date-dropdown-wrapper
+
+                    // Subscribe
+
+                    span.element-name subscription text field
+                    .subscription-wrapper
+                        +subscrText("test-form","subscription text field", "email")
+
+                // Column 2
+                .form-elements-box1-column
+                    .checkbox-wrapper
+                        +checkBox("action", "checkbox buttons", [
+                            {name: "smoke",value: "canSmoke", nameText: "Можно курить"},
+                            {name: "animals", value: "withAnimals", nameText: "Можно с питомцами"},
+                            {name:"guests", value: "guestsAllowed" , nameText: "Можно пригласить гостей (до 10 человек)"}
+                            ])
+                    span.element-name Radio buttons
+                    .radiobox-wrapper.pd-10
+                        +radioBox([{name: "gender", value: "men", nameText: "Мужчина", checked:true},
+                            {name: "gender", value: "woman", nameText: "Женщина"}], "test-form")
+                    span.element-name Toggle
+                    .toggle-buttons.pd-10
+                        .toggle-wrapper
+                            +toggle("test-form", "special", "special",  "Получать спрецпредложения", false)
+                        .toggle-wrapper.pd-10
+                            +toggle("test-form", "special-2", "special-2", "Получать спрецпредложения", true)
+                    span.element-name Like Button
+                    .like-buttons.pd-10
+                        .like-button-wrapper
+                            +likeBtn("action","test-like", 0, false)
+                        .like-button-wrapper
+                            +likeBtn("action","test-like2", 12, true)
+                    span.element-name Rate Button
+                        .rate-buttons.pd-10
+                            .rate-button-wrapper
+                                +rateBtn("rate-test", "action")
+                            .rate-button-wrapper
+                                +rateBtn("rate-test2", "action")
+
+                //Column 3
+                .form-elements-box1-column
+                    .range-slider-wrapper
+                        +rangeSlider("range-slider", "action")
+
+                    //Buttons
+                    span.element-name buttons
+                    .buttons-block(style="padding-top: 10px")
+                        .button-wrapper
+                            +btn("click me", "text-button")
+                        .button-wrapper
+                            +btn("click me", "text-button")
+                    .buttons-block
+                        .button-wrapper
+                            +ghostBtn("click me", "test-ghost")
+                        .button-wrapper
+                            +ghostBtn("click me", "test-ghost")
+                    .buttons-block(style="padding: 0 20px 30px 20px")
+                        .button-wrapper
+                            +borderlessBtn("click me", "test-borderless")
+                        .button-wrapper
+                            +borderlessBtn("click me", "test-borderless")
+                    .arrow-button-wrapper.button-wrapper
+                        +arrButton("перейти к оплате", "arrow-test", "text-form", "arrow-test")
+
+                    // Pagination
+                    span.element-name pagination
+                    .pagination-wrapper
+                        +pagination()
+            // Box 2
+            .form-elements-box2
+                //Column1
+                .form-elements-box2-column
+                    .expandable-checkbox
+                            +expandCheckbox("action", "expandable checkbox list", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
+                .form-elements-box2-column
+                    .rich-checkbox-wrapper
+                        +richCheckbox("action", "rich checkbox buttons", [{name:"wide", nameText:"Широкий коридор", subText:"Ширина коридоров в номере не менее 91 см."},
+                            {name:"invalid-sup", nameText:"Помощник для инвалидов", subText:"На 1 этаже вас встретит специалист и проводит до номера."}])
+                .form-elements-box2-column
+                    span.element-name bullet list
+                    .bullet-list-wrpapper(style="padding-top: 15px")
+                        +bulletList(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+            // Box 3
+            .form-elements-box3
                 .icon-text-list-wrapper
-                    +iconTextList([{icon: 'insert_emoticon', text:"Комфорт", subText: "Шумопоглощающие стены"},{icon: 'location_city', text:"Удобство", subText: "Окно в каждой из спален"}])
+                        +iconTextList([{icon: 'insert_emoticon', text:"Комфорт", subText: "Шумопоглощающие стены"},{icon: 'location_city', text:"Удобство", subText: "Окно в каждой из спален"}])
+                .comment-block-wrapper
+                        +commentBlock()
 script(src="/main.bundle.js")
 

@@ -1,71 +1,94 @@
+.form-elements{
+  &-container{
+    max-width: 1920px;
+    min-width: 320px;
+    padding: 140px;
+  }
+  &-logo{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+  &-box1{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      padding-bottom: 100px;
+    &-column{
+      min-width: 320px;
+      // Column 1
+      .text-field-wrapper,
+      .dropdown-wrapper{padding-bottom: 20px;}
+      .masked-text-field-wrapper,
 
-body{
-  max-width: 1920px;
-  min-width: 320px;
-}
-.form-boxes{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  .container{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    .element-name{
-      margin-bottom: 5px;
-      font-size: 12px;
-      font-weight: bold;
-      line-height: (14,63/12);
-      text-transform: uppercase;
+      .filter-date-dropdown-wrapper,
+      .date-blocks{padding-bottom: 40px;}
+
+      // Column 2
+        //elem special top padding
+        .pd-10{padding-top: 10px}
+      .checkbox-wrapper,
+      .radiobox-wrapper,
+      .toggle-buttons,
+      .like-buttons{margin-bottom: 40px}
+
+      .like-button-wrapper{
+        display: inline-block;
+        padding-right: 10px;
+      }
+      .rate-button-wrapper{
+        display: inline-block;
+        padding-right: 20px;
+      }
+      //Column 3
+      .range-slider-wrapper,
+      .arrow-button-wrapper{
+        padding-bottom: 40px;
+      }
+      .buttons-block{
+        display: flex;
+        justify-content: space-between;
+        max-width: 220px;
+        padding-bottom: 30px;
+        .button-wrapper{
+          display: inline-block;
+        }
+      }
+
+
     }
   }
-}
-.text-field-wrapper{
-  width: 320px;
-}
-.arrow-button-wrapper{
-  width: 320px;
-}
-.dropdown-wrapper{
-  width: 320px;
-}
-.masked-text-field-wrapper{
-  width: 320px;
-}
-.date-blocks{
-  display: flex;
-  width: 320px;
-.date-dropdown-wrapper{
-  width: 150px;
+  // Box 2
+
+  &-box2{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    &-box2-column{
+
+    }
+  }
+
+  // Box3
+
+  &-box3{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
   }
 }
-.filter-date-dropdown-wrapper{
-  width: 266px;
-}
-.subscription-wrapper{
-  width: 267px;
-  height: 64px;
-}
-.checkbox-wrapper{
-  width: 222px;
-}
-.radiobox-wrapper{
-    width: 220px;
-}
-.like-button-wrapper{
-  width: 40px;
-}
-.rate-button-wrapper{
-  width: 120px;
-}
-.buttons-block{
-  max-width: 218px;
-  display: flex;
-  justify-content: space-between;
 
 
+
+
+
+
+.element-name{
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: (14,63/12);
+  text-transform: uppercase;
 }
-.button-wrapper{
-   display: inline;
-   margin-bottom: 30px;
- }
