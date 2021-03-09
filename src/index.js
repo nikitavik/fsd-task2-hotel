@@ -11,8 +11,6 @@ import "/components/header/header.scss"
 import "/components/footer/footer.scss"
 import "/components/colors-and-types/color-block/color-block.scss"
 import "/components/colors-and-types/type-block/type-block.scss"
-import "/components/colors-and-types/header-footer/header-footer.scss"
-
 
 // form element's css
 
