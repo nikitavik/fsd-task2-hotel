@@ -1,16 +1,11 @@
 @import "../../../styles/main";
 .color-box{
+  width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  //max-width: 282px;
-  max-height: 70px;
-  font-family: $Montserrat;
-  //margin-bottom: 20px;
   &__square{
-    padding: 35px;
-    //width: 70px;
-    //height: 70px;
+    min-width: 70px;
+    min-height: 70px;
     border-radius: 6px;
     &_background_ds100{
       background: $DarkShade;
@@ -36,15 +31,12 @@
   }
 }
 .box-name{
-    padding-left: 40px;
+  padding-left: 40px;
+  white-space: nowrap;
+
+  font-size: 19px;
+  line-height: (28/19);
   &__name{
     font-weight: bold;
-    font-size: 19px;
-    line-height: 1.47;
-  }
-  &__hex{
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 1.47;
   }
 }

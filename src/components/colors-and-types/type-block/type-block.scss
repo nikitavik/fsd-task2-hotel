@@ -1,10 +1,9 @@
 @import "../../../styles/main";
 .type-box {
+  width: 100%;
   display: flex;
-  flex-flow: row;
-  font-family: $Montserrat;
   &__tag {
-    width: 37px;
+    min-width: 37px;
     font-weight: normal !important;
     color: $DarkShade25 !important;
     text-align: right;
@@ -22,7 +21,6 @@
     }
   }
   &__text {
-    width: 369px;
     padding-left: 30px;
     &_sub-section{
       @include sub-section
