@@ -47,7 +47,6 @@ import "/components/cards/booking-card/booking-card.scss"
 
 // js
 import "/components/form-elements/dropdown/dropdown.js"
-import "/components/form-elements/like-button/like-button.js"
 import "/components/form-elements/range-slider/range-slider.js"
 import "/components/form-elements/pagination/pagination.js"
 import "/components/form-elements/expandable-checkbox/expandable-checkbox.js"
