@@ -1,7 +1,8 @@
 mixin expandCheckbox(action, name, boxes)
     form.expandable-checkbox(action=action)
-        span.expandable-checkbox__name= name
-        span.expandable-checkbox__marker.material-icons expand_more
+        .expandable-checkbox__label
+            span.expandable-checkbox__name= name
+            span.expandable-checkbox__marker.material-icons expand_more
         .expandable-checkbox__list
             for box in boxes
                 label.checkbox__item(for=box.name)
