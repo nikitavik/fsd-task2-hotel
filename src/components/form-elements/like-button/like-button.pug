@@ -1,6 +1,6 @@
 mixin likeBtn(action, name, value, checked)
     form.like-button(action=action method="get")
-        input.like-button__input(type="checkbox" name=name value=value id=name checked=checked)
-        label.like-button__label(for=name)
-            span.like-button__mark(class="material-icons md-10") favorite_border
+        label.like-button_label(for= name)
+            input.like-button__input(type="checkbox" name=name value=value id=name checked=checked)
+            .like-button__mark(class="material-icons md-10")
             span.like-button__text=value
