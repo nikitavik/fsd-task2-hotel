@@ -12,6 +12,7 @@ $(document).ready(function (){
     const minus = document.getElementsByClassName("dropdown__minus")
     const clear = document.getElementsByClassName("d-clear")
     const confirm = document.getElementsByClassName("d-confirm")
+    
     const dropdown = {
         plus :function (option) {
             let i = counters[option].innerHTML
