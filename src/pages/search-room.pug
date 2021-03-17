@@ -1,0 +1,54 @@
+extends layout
+include ../components/form-elements/pagination/pagination
+include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
+include ../components/form-elements/range-slider/range-slider
+include ../components/form-elements/checkbox-buttons/checkbox-buttons
+include ../components/form-elements/rich-checkbox/rich-checkbox
+include ../components/form-elements/expandable-checkbox/expandable-checkbox
+include ../components/form-elements/dropdown/dropdown
+include ../components/cards/room-card/room-card
+
+block content
+    .container
+        section.search-room
+            aside.search-menu
+                .search-menu__date-filter
+                    span.search-menu__title даты пребывания в отеле
+                    +filterDateDropdown("search-action", "Выберите дату", "search-menu-filter")
+                .search-menu__dropdown
+                    span.search-menu__title гости
+                    +dropdown("search-form-guest", "Сколько Гостей?", "dropdown-search-form-guest",
+                            [{opName: "Взрослые", op: "adult"},
+                            {opName: "Дети", op: "children"},
+                            {opName: "Младенцы", op: "toddler"}]
+                            )
+
+                .search-menu__range
+                    +rangeSlider("диапазон цены", "search-action")
+                    span.search-menu__subtitle Стоимость за сутки пребывания в номере
+                .search-menu__checkbox
+                    +checkBox("search-action", "правила дома", [
+                        {name: "smoke", value: "canSmoke", nameText: "Можно курить"},
+                        {name: "animals", value: "withAnimals", nameText: "Можно с питомцами"},
+                        {name: "guests", value: "guestsAllowed", nameText: "Можно пригласить гостей (до 10 человек)"}
+                    ])
+                .search-menu__rich-checkbox
+                    +richCheckbox("search-action", "Доступность",
+                        [{name: "wide", nameText: "Широкий коридор", subText: "Ширина коридоров в номере не менее 91 см."},
+                        {name: "invalid-sup", nameText: "Помощник для инвалидов", subText: "На 1 этаже вас встретит специалист и проводит до номера."}])
+                .search-menu__dropdown
+                    span.search-menu__title удобства номера
+                    +dropdown("search-form-facilities", "Сколько Гостей?", "dropdown-search-form-facilities",
+                            [{opName: "Взрослые", op: "adult"},
+                            {opName: "Дети", op: "children"},
+                            {opName: "Младенцы", op: "toddler"}]
+                    )
+                .search-menu__expandable-checkbox
+                    +expandCheckbox("search-action", "дополнительные удобства", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
+            section.search-body
+                h2.search-body__title Номера, которые мы для вас подобрали
+                .search-body__rooms
+                    .search-body__rooms-page
+                        +roomCard("888", "люкс", "9 990₽", "65", "room888", ["room888", "room840"])
+                .serach-body__pagination
+                    +pagination()

@@ -1,0 +1,41 @@
+@import "src/styles/main";
+
+.search-room{
+    display: flex;
+    flex-flow: row;
+
+    padding: 30px 0;
+  .search-menu{
+    min-width: 266px;
+    max-width: 266px;
+
+    margin-right: 60px;
+    &__title{
+      font-weight: bold;
+      font-size: 12px;
+      line-height: (15/12);
+      text-transform: uppercase;
+    }
+    &__subtitle{
+      font-size: 12px;
+      line-height: (14/12);
+      color: $DarkShade50;
+    }
+    &__date-filter{
+      padding-bottom: 20px;
+    }
+    &__dropdown, &__range, &__checkbox, &__rich-checkbox{
+      padding-bottom: 30px;
+    }
+  }
+  .search-body{
+      &__title{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: (29/24);
+      }
+      &__rooms{
+        padding: 20px 0 40px;
+      }
+  }
+}
