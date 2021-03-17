@@ -17,14 +17,16 @@
     color: $DarkShade75;
     cursor: pointer;
     transition: 500ms ease-in-out;
+    transform: rotate(180deg);
   }
   &__list{
+    display: none;
     position: absolute;
     top: 35px;
   }
 
 }
 .checkbox-expanded{
-  transform: rotate(180deg);
+  transform: rotate(-360deg);
 }
 
