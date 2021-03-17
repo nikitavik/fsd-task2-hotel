@@ -65,8 +65,8 @@
     flex-flow: row;
     justify-content: space-between;
     padding-bottom: 100px;
-    &-box2-column{
-
+    &-column{
+      min-width: 320px;
     }
   }
 
