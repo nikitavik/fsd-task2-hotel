@@ -38,9 +38,16 @@ footer.footer-wrapper
         .footer-subscribe__title Подписка
         .footer-subscribe__text Получайте специальные предложения и новости сервиса
         .footer-subscribe__button
-            +subscrText("footer-subscribe-email", "Email")
+            +subscrText("action", "footer-subscribe-email", "Email")
+.footer-hr
 .footer-container.sub
     .subfooter
         .subfooter__copyright Copyright © 2018 Toxin отель. Все права зачищены.
-        .subfooter__buttons
+        .subfooter-buttons
+            a(href="").subfooter-buttons__icon
+                i.fab.fa-twitter
+            a(href="").subfooter-buttons__icon
+                i.fab.fa-facebook-square
+            a(href="").subfooter-buttons__icon
+                i.fab.fa-instagram
 
