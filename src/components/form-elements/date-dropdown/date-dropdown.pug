@@ -1,6 +1,8 @@
 mixin dateDropdown (text, name)
     form.date-dropdown(action="#" method="get")
-        input.date-dropdown__input(type="text"
-            placeholder= text
-            )
-        span.date-dropdown__expand(class="material-icons date-dropdown__expand") expand_more
+        .date-dropdown__block
+            input.date-dropdown__input(placeholder= text spellcheck="false" readonly)
+            span.date-dropdown__expand.material-icons expand_more
+        .date-dropdown__block__alt
+            input.date-dropdown__alternative(placeholder= text spellcheck="false" readonly)
+            span.date-dropdown__expand-alt.material-icons expand_more
