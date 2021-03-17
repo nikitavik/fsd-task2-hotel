@@ -1,11 +1,12 @@
 import "/styles/reset.scss"
-import "/styles/main.scss"
+// import "/styles/main.scss"
 import "/styles/index.scss"
 import "/styles/cards.scss"
 import "/styles/form-elements.scss"
 import "/styles/colors-and-types.scss"
 import "/styles/layout.scss"
 import "/styles/landing-page.scss"
+import "/styles/search-room.scss"
 import "/components/logo/logo.scss"
 import "/components/header/header.scss"
 import "/components/footer/footer.scss"
@@ -43,6 +44,7 @@ import "/components/cards/search-card/search-card.scss"
 import "/components/cards/registration/registration.scss"
 import "/components/cards/login-card/login-card.scss"
 import "/components/cards/booking-card/booking-card.scss"
+import "/components/cards/room-card/room-card.scss"
 
 
 // js
@@ -53,7 +55,7 @@ import "/components/form-elements/expandable-checkbox/expandable-checkbox.js"
 import "/components/form-elements/date-dropdown/date-dropdown.js"
 import "/components/form-elements/masked-text-field/masked-text-field.js"
 import "/components/form-elements/filter-date-dropdown/filter-date-dropdown.js"
-
+import "/components/cards/room-card/room-card.js"
 
 
 
