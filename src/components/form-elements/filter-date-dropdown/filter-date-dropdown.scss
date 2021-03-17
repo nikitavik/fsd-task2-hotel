@@ -1,0 +1,39 @@
+@import "src/styles/main";
+
+.filter-date-dropdown{
+  position: relative;
+
+  max-width: 266px  ;
+  width: 100%;
+  &__input{
+    width: 100%;
+    padding: 9px 0 9px 15px;
+
+    font-size: 14px;
+    line-height: (24/14);
+    color: $DarkShade75;
+    text-transform: lowercase;
+
+    border: 1px solid $DarkShade25;
+    border-radius: 4px;
+    &::placeholder{
+      text-transform: capitalize;
+       color: $DarkShade25;
+    }
+  }
+  &__expand{
+    position: absolute;
+    right: -10px;
+    top: 10px;
+
+    min-height: 44px;
+    min-width: 44px;
+
+    color: $DarkShade50;
+
+    cursor: pointer;
+    &::selection{
+      background: transparent;
+    }
+  }
+}
