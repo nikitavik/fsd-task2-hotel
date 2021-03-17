@@ -19,6 +19,8 @@ include ./components/form-elements/expandable-checkbox/expandable-checkbox
 include ./components/form-elements/date-dropdown/date-dropdown
 include ./components/form-elements/masked-text-field/masked-text-field
 include ./components/form-elements/comment-block/comment-block
+include ./components/form-elements/filter-date-dropdown/filter-date-dropdown
+
 
 
 
@@ -28,9 +30,8 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        link(rel="stylesheet" href="/main.css")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet")
-        link(rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title TOXIN
     body
         .form-elements-container
@@ -61,12 +62,12 @@ html(lang="ru")
 
                     .date-blocks
                         .date-dropdown-wrapper
-                            //+dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
+                            +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
                         .date-dropdown-wrapper
                             //+dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
                     span.element-name filter date dropdown
                     .filter-date-dropdown-wrapper
-
+                        +filterDateDropdown("action", "Выберете дату", "filter-test")
                     // Subscribe
 
                     span.element-name subscription text field
@@ -94,7 +95,7 @@ html(lang="ru")
                     span.element-name Like Button
                     .like-buttons.pd-10
                         .like-button-wrapper
-                            +likeBtn("action","test-like", 0, false)
+                            +likeBtn("action","test-like", 2, false)
                         .like-button-wrapper
                             +likeBtn("action","test-like2", 12, true)
                     span.element-name Rate Button
@@ -153,5 +154,6 @@ html(lang="ru")
                         +iconTextList([{icon: 'insert_emoticon', text:"Комфорт", subText: "Шумопоглощающие стены"},{icon: 'location_city', text:"Удобство", subText: "Окно в каждой из спален"}])
                 .comment-block-wrapper
                         +commentBlock()
-script(src="/main.bundle.js")
+
+
 
