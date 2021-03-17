@@ -1,9 +1,14 @@
 require("paginationjs")
 $(document).ready(function () {
-    $('.pagination-container').pagination({
-        dataSource: [1],
-        autoHidePrevious: true,
-        nextText: "",
-        prevText: "",
-    })
+    try {
+        $('.pagination-container').pagination({
+            dataSource: [1],
+            autoHidePrevious: true,
+            nextText: "",
+            prevText: "",
+        })
+    }
+    catch (err){
+        console.log("Pagination not found")
+    }
 })
