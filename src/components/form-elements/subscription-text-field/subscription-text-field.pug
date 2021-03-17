@@ -1,5 +1,5 @@
-mixin subscrText(form, name, placeholder)
-        .subscription-field
+mixin subscrText(action, name, placeholder)
+        form.subscription-field(action=action)
             input.subscription-field__input(
                 form= form
                 type="email"
