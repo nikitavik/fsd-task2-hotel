@@ -1,0 +1,136 @@
+html,body{
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+}
+.gray-back{
+  background: #E5E5E5;
+}
+.container{
+  width: 100%;
+  padding: 70px 140px 0;
+  max-width: 1920px;
+  min-width: 320px;
+}
+
+ //Media queries
+
+// 370px
+@media (max-width: 370px) {
+  // Header and Footer
+  .header{max-width: 370px}
+
+}
+
+// 425px
+@media (max-width: 425px) {
+  // Header and Footer
+  .header{max-width: 425px}
+
+}
+
+// 640 px
+@media (max-width: 640px) {
+  // Header and Footer
+  .header{
+    max-width: 640px;
+  }
+  .container{
+    padding: 0 1px !important;
+  }
+  // Pages
+  //Landing page
+  .landing-page{
+    .background{
+      position: initial !important;
+      max-width: 640px
+    }
+  }
+}
+// 900px
+@media (max-width: 900px) {
+  // Header and Footer
+  .header{
+    max-width: 900px;
+  }
+  .header-menu{display: block !important;}
+  //Footer
+  .nav{display: none}
+  .footer-wrapper{justify-content: center !important;}
+  .footer-logo{padding: 120px 0 20px 0!important;}
+  .subfooter{
+    display: flex;
+    flex-flow: column;
+    padding: 0 0 120px 0 !important;
+    &-buttons{
+      padding-top: 25px;
+    }
+  }
+  .footer-logo-subtext{display: none;}
+  .footer-hr{display: none}
+  .footer-nav{display: none !important;}
+  .footer-subscribe{display: none;}
+
+  // Pages
+  //Landing page
+  .landing-page{
+    .background{max-width: 900px !important}
+    &__subtext{display: none;}
+    &-card-wrapper{top: 30px !important;}
+  }
+}
+// 1000px
+@media (max-width: 1000px) {
+  // Main
+  .header{
+    padding: 0 10px !important;
+    max-width: 1000px;
+  }
+  .footer-nav{display: none !important;}
+  // Pages
+  //Landing page
+  .landing-page__subtext{}
+}
+
+// 1200px
+@media (max-width: 1200px) {
+  // Main
+  .header{max-width: 1200px}
+  .footer-nav{display: none !important;}
+
+  // Pages
+  //Landing page
+  .background{max-width: 1200px}
+  .landing-page__subtext{right: -100px !important;}
+}
+
+// 1440px
+
+@media (max-width: 1440px) {
+  // Main
+  .header{max-width: 1440px }
+  // Pages
+  //Landing page
+  .background{max-width: 1440px}
+}
+
+// 1600px
+
+@media (max-width: 1600px) {
+  // Main
+  .header{max-width: 1600px }
+  // Pages
+  //Landing page
+  .background{max-width: 1600px}
+}
+
+// 1920 px
+
+@media (max-width: 1920px) {
+  // Main
+  .header{max-width: 1920px}
+  // Pages
+  //Landing page
+  .background{max-width: 1920px}
+}
+
