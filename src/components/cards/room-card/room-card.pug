@@ -1,0 +1,23 @@
+include ../../form-elements/rate-button/rate-button
+
+mixin roomCard(number, roomClass, cost, numberRate, rateName, roomImg)
+    .room-card
+        ul.room-card__slideshow
+            for room in roomImg
+                li
+                    img(src=`img/rooms/${room}.png` alt="room1")
+        .room-card-info
+            .room-card-info__room
+                span.room-card-info__number-sign №
+                span.room-card-info__number=number
+                span.room-card-info__class=roomClass
+            .room-card-info__price
+                span.room-card-info__cost=cost
+                span.room-card-info__day в сутки
+        .room-card-hr
+        .room-card-rating
+            .room-card-rating__rate-button
+                +rateBtn(`${rateName}`, "room-action")
+            .room-card-rating__comment
+                span.room-card-rating__number=numberRate
+                span.room-card-rating__text Отзывов
