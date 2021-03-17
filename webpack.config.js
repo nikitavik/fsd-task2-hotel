@@ -16,16 +16,18 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main: "/index.js",
+        main: "./index.js",
     },
     devtool: false,
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
-        publicPath: '/dist',
+        publicPath: '',
     },
     devServer: {
         overlay: true,
+        contentBase: path.join(__dirname,"dist")
+
     },
     plugins: [
         new webpack.ProvidePlugin({
@@ -61,7 +63,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ["style-loader","css-loader"]
+                use: ["style-loader","css-loader","sass-loader"]
             },
             {
                 test: /\.scss$/,
