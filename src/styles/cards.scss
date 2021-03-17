@@ -1,3 +1,27 @@
+.cards{
+  display: grid;
+  row-gap: 40px;
+  column-gap: 40px;
+  grid-template-columns: 380px 380px 380px;
+  grid-template-areas:
+    "search book calendar"
+    "reg log room";
+}
+.search-card-wrapper{
+  grid-area: search;
+}
+.registration-card-wrapper{
+  grid-area: reg;
+}
+.login-card-wrapper{
+  grid-area: log;
+}
+.booking-card-wrapper{
+  grid-area: book;
+}
+.room-card-wrapper{
+  grid-area: room;
+}
 
 .card-wrapper{
   max-width: 380px;
