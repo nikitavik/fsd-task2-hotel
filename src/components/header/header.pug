@@ -4,7 +4,8 @@ include ../form-elements/ghost-button/ghost-button
 header.header
     span.material-icons.header-menu.md-48 menu
     .logo-wrapper
-        include ../logo/logo
+        a(href="landing-page.html")
+            include ../logo/logo
     .nav-wrapper
         nav.nav
             ul.nav-list
@@ -22,7 +23,9 @@ header.header
                     span.material-icons.nav-list__mark expand_more
         .header-buttons-block
             .header-button-wrapper
-                +ghostBtn("Войти")
+                a(href="sign-in.html")
+                    +ghostBtn("Войти")
             .header-ghost-button-wrapper
-                +btn("Зарегистрироваться")
+                a(href="registration.html")
+                    +btn("Зарегистрироваться")
 
