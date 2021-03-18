@@ -1,16 +1,14 @@
 .landing-page{
-  position: relative;
-  &-card-wrapper{
-    position: absolute;
-    top: 140px;
-  }
+  display: flex;
+  align-items: flex-start;
   &__background{
+    margin: 0 -140px;
     position: relative;
     max-width: 1920px;
     width: 100vw;
-
-
-    left: -140px;
+  }
+  &-card-wrapper {
+    position: absolute;
   }
   &__subtext{
     position: absolute;
