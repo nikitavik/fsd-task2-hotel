@@ -6,7 +6,10 @@ import "/styles/form-elements.scss"
 import "/styles/colors-and-types.scss"
 import "/styles/layout.scss"
 import "/styles/landing-page.scss"
+import "/styles/registration.scss"
+import "/styles/sign-in.scss"
 import "/styles/search-room.scss"
+import "/styles/room-details.scss"
 import "/components/logo/logo.scss"
 import "/components/header/header.scss"
 import "/components/footer/footer.scss"
@@ -57,6 +60,8 @@ import "/components/form-elements/masked-text-field/masked-text-field.js"
 import "/components/form-elements/filter-date-dropdown/filter-date-dropdown.js"
 import "/components/cards/room-card/room-card.js"
 
+// Media
+import "/styles/media.scss"
 
 
 
