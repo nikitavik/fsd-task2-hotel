@@ -1,0 +1,49 @@
+extends layout
+include ../components/form-elements/icon-text-list/icon-text-list
+include ../components/form-elements/comment-block/comment-block
+include ../components/form-elements/bullet-list/bullet-list
+
+
+block content
+    .container
+        .room-details
+            section.img-block
+                .img-block__main-img
+                    img(src="./img/rooms/room888/room888big.png")
+                .img-block__min-imgs
+                    img(src="./img/rooms/room888/room888small.png")
+                    img(src="./img/rooms/room888/room888small2.png")
+            section.room-block
+                .main-field
+                    .main-field-info-section
+                        .main-field__info
+                            .main-field__title Сведения о номере
+                            .main-field__icon-text
+                                +iconTextList([
+                                    {icon: 'insert_emoticon', text: "Комфорт", subText: "Шумопоглощающие стены"},
+                                    {icon: 'location_city', text: "Удобство", subText: "Окно в каждой из спален"},
+                                    {icon: 'whatshot', text: "Уют  ", subText: "Номер оснащён камином"}
+                                ])
+                        .main-field__rating
+                            .main-field__title Впечатления от номера
+                            .main-field__rate
+                    .main-field-comment-section
+                        .main-field-comment-section__title
+                            span.main-field__title Отзывы посетителей номера
+                            span.main-field__subtitle 2 отзыва
+                        .main-field__comment
+                            +commentBlock("user", "Мурад Сарафанов",
+                                "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+                            +commentBlock("user2", "Патрисия Стёклышкова",
+                                "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.")
+                    .main-field-rules-section
+                        .main-field__rules
+                            .main-field__title Правила
+                            .main-field__list
+                                +bulletList(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+                        .main-field__cancel
+                            .main-field__title Отмена
+                            .main-field__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                .card-field
+                    .card-field-wrapper.card-wrapper
+                        include ../components/cards/booking-card/booking-card
