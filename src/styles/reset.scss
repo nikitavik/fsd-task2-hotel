@@ -1,3 +1,7 @@
+// Delete annoying selection
+*::selection{
+  background: none;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -15,8 +19,20 @@
 h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 
 :focus,:active{outline: none;}
-a:focus, a:active{outline: none;}
 
+// Delete a tag annoying style
+a:focus, a:active{outline: none;}
+a:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 nav,footer,header,aside{display: block}
 
 html,body{
@@ -84,7 +100,6 @@ textarea,
 select {
   font: inherit;
 }
-
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   *,
