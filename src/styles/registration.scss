@@ -1,0 +1,16 @@
+.registration-page{
+  display: flex;
+  justify-content: center;
+  &__background{
+    margin: 0 -140px;
+    position: relative;
+    max-width: 1920px;
+    width: 100vw;
+
+  }
+  &-card-wrapper {
+    position: absolute;
+    top: 90px;
+
+  }
+}
