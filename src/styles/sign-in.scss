@@ -7,10 +7,52 @@
     position: relative;
     max-width: 1920px;
     width: 100vw;
+    z-index: -9999;
   }
   &-card-wrapper {
     position: absolute;
+    min-width: 380px;
 
+  }
+}
+// Media
+@media (max-width: 1920px) {}
+@media (max-width: 1600px) {}
+@media (max-width: 1440px) {}
+@media (max-width: 1200px) {}
+@media (max-width: 1024px) {}
 
+// 800px Card fix
+
+@media (max-width: 800px) {
+  .sign-in-page{
+    &-card-wrapper {
+      top: 100px;
+    }
+    &__background{
+      min-height: 417px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .sign-in-page{
+    &__background{
+      margin: 70px 0 0 !important;
+      max-width: 640px
+    }
+  }
+}
+@media (max-width: 440px) {}
+@media (max-width: 376px) {
+  .sign-in-page{
+    &__background{
+      margin: 60px 0 0 !important;
+      max-width: 376px
+    }
+    &-card-wrapper {
+      min-width: 0;
+      max-width: 319px
+    }
   }
 }
