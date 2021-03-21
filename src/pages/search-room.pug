@@ -11,6 +11,7 @@ include ../components/cards/room-card/room-card
 block content
     .container
         section.search-room
+            // Menu
             aside.search-menu
                 .search-menu__date-filter
                     span.search-menu__title даты пребывания в отеле
@@ -45,10 +46,22 @@ block content
                     )
                 .search-menu__expandable-checkbox
                     +expandCheckbox("search-action", "дополнительные удобства", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
+            // Body
             section.search-body
                 h2.search-body__title Номера, которые мы для вас подобрали
                 .search-body__rooms
                     .search-body__rooms-page
-                        +roomCard("888", "люкс", "9 990₽", "65", "room888", ["room888", "room840"])
+                        +roomCard("888", "люкс", "9 990₽", "145", "room888", ["room888", "room840"], "room-details")
+                        +roomCard("840", "", "9 900₽", "65", "room840", ["room840", "room888"], "room-link")
+                        +roomCard("980", "люкс", "8 500₽", "35", "room980", ["room980", "room840"], "room-link")
+                        +roomCard("856", "", "7 300₽", "19", "room856", ["room856", "room840"], "room-link")
+                        +roomCard("740", "", "6 000₽", "44", "room740", ["room740", "room840"], "room-link")
+                        +roomCard("982", "", "5 800₽", "56", "room982", ["room982", "room840"], "room-link")
+                        +roomCard("678", "", "5 500₽", "45", "room678", ["room678", "room840"], "room-link")
+                        +roomCard("450", "", "5 300₽", "39", "room450", ["room450", "room840"], "room-link")
+                        +roomCard("350", "", "5 000₽", "77", "room350", ["room350", "room840"], "room-link")
+                        +roomCard("666", "", "5 000₽", "25", "room666", ["room666", "room840"], "room-link")
+                        +roomCard("444", "", "5 000₽", "15", "room444", ["room444", "room840"], "room-link")
+                        +roomCard("352", "", "5 000₽", "55", "room352", ["room352", "room840"], "room-link")
                 .serach-body__pagination
                     +pagination()
