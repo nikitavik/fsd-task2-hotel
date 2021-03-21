@@ -37,5 +37,13 @@
       &__rooms{
         padding: 20px 0 40px;
       }
+
+      &__rooms-page{
+        display: grid;
+        grid-template-columns: repeat(3, 270px);
+        grid-template-rows: repeat(3, 257px);
+        column-gap: 12px;
+        row-gap: 8px;
+      }
   }
 }
