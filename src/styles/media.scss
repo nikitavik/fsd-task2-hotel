@@ -3,62 +3,48 @@
 // 1920 px
 
 @media (max-width: 1920px) {
-  // Main
+  // Header
   .header{max-width: 1920px}
-  // Pages
-  //Landing page
-  .background{max-width: 1920px}
 }
 
 // 1600px
 
 @media (max-width: 1600px) {
-  // Main
-  .header{max-width: 1600px }
-  // Pages
-  //Landing page
-  .background{max-width: 1600px}
+  // Header
+  .header {
+    max-width: 1600px
+  }
 }
-
 // 1440px
 
 @media (max-width: 1440px) {
-  // Main
+  // Header
   .header{max-width: 1440px }
-  // Pages
-  //Landing page
-  .background{max-width: 1440px}
 }
 
 // 1200px
 
 @media (max-width: 1200px) {
-  // Main
+  // Header
   .header{max-width: 1200px}
   .footer-nav{display: none !important;}
-
-  // Pages
-  //Landing page
-  .background{max-width: 1200px}
 }
 
-// 1000px
+// 1024px
+
 @media (max-width: 1024px) {
-  // Main
+  // Header
   .header{
     padding: 0 50px;
     max-width: 1024px;
   }
   .footer-nav{display: none;}
-  // Pages
-  //Landing page
-  .landing-page__subtext{}
 }
 
 // 918px
 
 @media (max-width: 918px) {
-  // Header and Footer
+  // Header
   .header{
     max-width: 918px;
   }
@@ -81,34 +67,20 @@
   .footer-hr{display: none}
   .footer-nav{display: none !important;}
   .footer-subscribe{display: none;}
-
-  // Pages
-  //Landing page
-  .landing-page{
-    .background{max-width: 900px !important}
-    &__subtext{display: none;}
-  }
 }
 
 // 640 px
 
 @media (max-width: 640px) {
-  // Header and Footer
+  // Header and Container
   .header{
     max-width: 640px;
   }
   .container{
-    padding: 0 1px !important;
-  }
-  // Pages
-  //Landing page
-  .landing-page{
-    .background{
-      //position: initial !important;
-      max-width: 640px
-    }
+    padding: 0 !important;
   }
 }
+
 // 500px (Padding fix)
 @media (max-width: 500px) {
   .header {padding: 0 5px}
@@ -116,27 +88,24 @@
   .header-ghost-button-wrapper {padding-left: 5px !important}
 }
 
-// 425px
+// 440px
 
 @media (max-width: 440px) {
   // Header
   .header{
     max-width: 440px;
     .regular-button{
-      font-size: 10px;
+      font-size: 10px !important;
       padding: 14px 12px 15px 12px;
     }
     .ghost-button{
-      font-size: 10px
+      font-size: 10px !important;
     }
     &-menu{font-size: 40px !important;}
   }
-
-
-  // Foooter
 }
 
-// 370px
+// 376px
 
 @media (max-width: 376px) {
   // Header
@@ -145,23 +114,38 @@
     min-height: 60px;
     &-menu{font-size: 30px !important;}
     &-buttons-block{padding-left: 2px !important;}
-    .logo-icon {
-      max-width: 35px !important;
-      max-height: 35px!important;
+    .logo{
+      &-icon {
+        max-width: 35px !important;
+        max-height: 35px!important;
+      }
+      &-text{
+        font-size: 13px;
+        }
     }
     .regular-button{
-      font-size: 9px;
+      font-size: 8px !important;
     }
     .ghost-button{
-      font-size: 9px
+      font-size: 8px !important;
     }
   }
   // Footer
+  .subfooter{
+    &__copyright{font-size: 12px !important;}
+  }
 }
 
-
-
-
+// Media template
+//@media (max-width: 1920px) {}
+//@media (max-width: 1600px) {}
+//@media (max-width: 1440px) {}
+//@media (max-width: 1200px) {}
+//@media (max-width: 1024px) {}
+//@media (max-width: 918px) {}
+//@media (max-width: 640px) {}
+//@media (max-width: 440px) {}
+//@media (max-width: 376px) {}
 
 
 
