@@ -3,14 +3,16 @@ include ../../form-elements/arrow-button/arrow-button
 include ../../form-elements/ghost-button/ghost-button
 .login-card.card
     h2.login-card__title Войти
-    .login-card__field-block
-        .login-card__text-filed
-            +textField("login-card__email", "Email", "email", "", true)
-        .login-card__text-field
-            +textField("login-card__password", "Пароль", "password", "", true)
-    .login-card__arrow-button
-        +arrButton("Войти", "login-card__login")
+    form(action="#", id="login-card-form" target, method="post").login-card__field-block
+        fieldset
+            .login-card__text-field
+                +textField("email", "login-card__email", "Email", "login-card-form", "login-card-email", "", true)
+            .login-card__text-field
+                +textField("password", "login-card__password", "Пароль", "login-card-form", "login-card-password", "", true)
+            .login-card__arrow-button
+                +arrButton("Войти", "login-card__login", "login-card-form", "login-card-login-button")
     .login-card__registration
         span.login-card__registration-text Нет аккаунта на Toxin?
         .login-card__registration-button
-            +ghostBtn("Создать", "login-card__create")
+            a(href="registration.html")
+                +ghostBtn("Создать", "login-card__create")
