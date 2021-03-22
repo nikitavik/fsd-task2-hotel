@@ -6,11 +6,11 @@ include ../../form-elements/ghost-button/ghost-button
     form(action="#", id="login-card-form" target, method="post").login-card__field-block
         fieldset
             .login-card__text-field
-                +textField("email", "login-card__email", "Email", "login-card-form", "login-card-email", "", true)
+                +textField("email", "login-card__email", "Email", "login-card-form", "mail", "", true)
             .login-card__text-field
-                +textField("password", "login-card__password", "Пароль", "login-card-form", "login-card-password", "", true)
+                +textField("password", "login-card__password", "Пароль", "login-card-form", "password", "", true)
             .login-card__arrow-button
-                +arrButton("Войти", "login-card__login", "login-card-form", "login-card-login-button")
+                +arrButton("Войти", "login-card__submit", "login-card-form", "login-card-login-button")
     .login-card__registration
         span.login-card__registration-text Нет аккаунта на Toxin?
         .login-card__registration-button
