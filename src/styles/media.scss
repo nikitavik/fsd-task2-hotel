@@ -43,10 +43,10 @@
 
 // 918px
 
-@media (max-width: 918px) {
+@media (max-width: 975px) {
   // Header
   .header{
-    max-width: 918px;
+    max-width: 975px;
   }
   .header-menu{display: block !important;}
 
@@ -69,20 +69,8 @@
   .footer-subscribe{display: none;}
 }
 
-// 640 px
-
-@media (max-width: 640px) {
-  // Header and Container
-  .header{
-    max-width: 640px;
-  }
-  .container{
-    padding: 0 !important;
-  }
-}
-
-// 500px (Padding fix)
-@media (max-width: 500px) {
+// 600px (Padding fix)
+@media (max-width: 600px) {
   .header {padding: 0 5px}
   .logo-text {font-size: 15px   ;padding-left: 5px !important;}
   .header-ghost-button-wrapper {padding-left: 5px !important}
@@ -111,7 +99,6 @@
   // Header
   .header{
     max-width: 376px;
-    min-height: 60px;
     &-menu{font-size: 30px !important;}
     &-buttons-block{padding-left: 2px !important;}
     .logo{
