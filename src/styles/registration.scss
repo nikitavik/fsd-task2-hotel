@@ -1,16 +1,30 @@
 .registration-page{
   display: flex;
   justify-content: center;
-  &__background{
-    margin: 0 -140px;
-    position: relative;
-    max-width: 1920px;
-    width: 100vw;
+  align-items: center;
 
-  }
+  position: relative;
+  top: 70px;
+
+  background-image: url("../img/backgrounds/registration-background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  max-width: 1920px;
+  min-height: 753px;
+  max-height: 753px;
   &-card-wrapper {
-    position: absolute;
-    top: 90px;
-
   }
 }
+// Media
+
+@media (max-width: 376px) {
+  .registration-page {
+    &-card-wrapper {
+      max-width: 310px;
+    }
+  }
+}
+
+
