@@ -4,34 +4,36 @@ include ../../form-elements/radio-buttons/radio-buttons
 include ../../form-elements/toggle/toggle
 include ../../form-elements/arrow-button/arrow-button
 include ../../form-elements/ghost-button/ghost-button
-.registration-card.card
+
+.registration-card
     h2.registration-card__title Регистрация аккаунта
-    .registration-card__registration-form
-        .registration-card__field-block
+    form(action="#", id="registration-card-form" target, method="post").registration-card__registration-form
+        fieldset.registration-card__field-block
             .registration-card__text-field
-                +textField("registration-card__first-name", "Имя", "firstname", "", true)
+                +textField("", "registration-card__first-name", "Имя", "registration-card-form", "firstname", "", true)
             .registration-card__text-field
-                +textField("registration-card__last-name", "Фамилия", "lastname", "", true)
-        .registration-card__radio
+                +textField("", "registration-card__last-name", "Фамилия", "registration-card-form", "lastname", "", true)
+        fieldset.registration-card__radio
             +radioBox([
                 {name: "gender", value: "men", nameText: "Мужчина", checked: true},
                 {name: "gender", value: "woman", nameText: "Женщина"}
-            ], "registration-form")
+            ], "registration-card-form")
         .registration-card__field-block
             .registration-card__text-field
                 span.registration-card__text-field-name Дата рождения
-                +maskedField("registration-card__birthday", "ДД.ММ.ГГГГ", "birthday", "", true)
-        .registration-card__field-block
+                +maskedField("registration-card-form","registration-card__birthday", "ДД.ММ.ГГГГ", "birthday", "", true)
+        fieldset.registration-card__field-block
             .registration-card__text-field
                 span.registration-card__text-field-name Данные для входа в сервис
-                +textField("registration-card__email", "Email", "email")
+                +textField("email", "registration-card__email", "Email", "registration-card-form", "email", "", true)
             .registration-card__text-field
-                +textField("registration-card__password", "Пароль", "password", "", true)
+                +textField("password", "registration-card__password", "Пароль", "registration-card-form", "password", "", true)
         .registration-card__toggle
-            +toggle("registration-special", "Получать спрецпредложения", false)
+            +toggle("registration-card-form", "registration-special", "registration-special", "Получать спрецпредложения", true)
         .registration-card__arrow-button
-            +arrButton("Перейти к оплате", "")
+            +arrButton("Перейти к оплате", "registration-card__submit", "registration-card-form", "registration-card-submit-button")
     .registration-card__login
         span.registration-card__login-text Уже есть аккаунт на Toxin
         .registration-card__login-button
-            +ghostBtn("Войти", "registration-card__button")
+            a(href="sign-in.html")
+                +ghostBtn("Войти", "registration-card__button", "registration-card-login")
