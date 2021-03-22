@@ -1,4 +1,18 @@
 @import "src/styles/main";
+.pagination{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  &-container{
+  }
+  &-subtext{
+    color: $DarkShade75;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+
 .paginationjs{
   ul{
     list-style-type: none;
