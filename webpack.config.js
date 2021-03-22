@@ -69,7 +69,9 @@ module.exports = {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader"]
+                    "sass?sourceMap",
+                    "sass-loader",
+                ]
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
