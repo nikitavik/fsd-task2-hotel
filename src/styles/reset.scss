@@ -2,6 +2,8 @@
 *::selection{
   background: none;
 }
+//Disable ALL list styles
+*{list-style: none}
 /* Box sizing rules */
 *,
 *::before,
@@ -68,6 +70,7 @@ ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
+
 
 /* Set core root defaults */
 html {
