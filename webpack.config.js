@@ -4,13 +4,13 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
-const WriteFilePlugin = require('write-file-webpack-plugin')
+// const WriteFilePlugin = require('write-file-webpack-plugin')
 const webpack = require("webpack")
 const PAGES_DIR = path.resolve(__dirname, "src")
 const PROD_DIR = path.resolve(__dirname, "src/pages")
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 const PROD_PAGES = fs.readdirSync(PROD_DIR).filter(fileName => fileName.endsWith('.pug'))
-const Inputmask=(typeof(window)!="undefined")?require("inputmask"):{};
+// const Inputmask=(typeof(window)!="undefined")?require("inputmask"):{};
 
 module.exports = {
     context: path.resolve(__dirname, "src"),
