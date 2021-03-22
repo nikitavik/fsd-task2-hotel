@@ -1,39 +1,32 @@
 require("paginationjs")
+        require("../../cards/room-card/room-card")
+        $(document).ready(function () {
+            // const data = $(".room-card")
+            //
+            // function template(data) {
+            //     let html = []
+            //     for (let i = 0; i < data.length; i++){
+            //         html.push(data[i])
+            //     }
+            //     return html
+            // }
 
-$(document).ready(function () {
-    const data = $(".room-card")
+            const container = $(".pagination-container")
+            const pagination = container.pagination({
+                dataSource: [1,2,3], //template(data)
+                pageSize: 1,
+                autoHidePrevious: true,
+                autoHideNext: true,
+                nextText: "",
+                prevText: "",
 
-    function template(data) {
-        let html = "<ul>";
-        $.each(data, function(index, item){
-            html +=  "<li>" + item.parseHTML() + "</li>"
-        });
-        html = html + "</ul>"
-        return html;
-    }
+                callback: function(data, pagination) {
+                    // const html = template(data);
+                    // $('#data-container').html(html);
+                    // console.log(html)
+                },
+                afterPaging: function () {
 
-        console.log(template(data))
-
-
-    function log(content){
-        window.console &&
-        console.log(content)
-    }
-
-    const container = $(".pagination-container")
-    container.pagination({
-        dataSource: [1,2 ,3],
-        pageSize: 2,
-        autoHidePrevious: true,
-        autoHideNext: true,
-        nextText: "",
-        prevText: "",
-
-        callback: (data, pagination) => {
-            let html = template(data)
-            $(".pagination-data").html(html)
-
-            console.log(html)
-        }
-    })
-})
+                }
+            })
+        })
