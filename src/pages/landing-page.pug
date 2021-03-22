@@ -1,9 +1,7 @@
 extends layout
 
 block content
-    .container
-        section.landing-page
-            img.landing-page__background.background(src="./img/backgrounds/landing-background.png")
-            .landing-page__subtext Лучшие номера для вашей работы, отдыха и просто вдохновения
-            .landing-page-card-wrapper.card-wrapper
-                include ../components/cards/search-card/search-card
+    section.landing-page
+        .landing-page-card-wrapper.card-wrapper
+            include ../components/cards/search-card/search-card
+        .landing-page__subtext Лучшие номера для вашей работы, отдыха и просто вдохновения
