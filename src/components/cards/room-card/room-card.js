@@ -1,8 +1,8 @@
 require("lightslider")
 require("lightslider/dist/css/lightslider.css")
-
 $(document).ready(function () {
-    $(".room-card__slideshow").lightSlider({
+    const slider = function () {
+            $(".room-card__slideshow").lightSlider({
             item: 1,
             autoWidth: false,
             slideMove: 1, // slidemove will be 1 if loop is true
@@ -55,5 +55,6 @@ $(document).ready(function () {
             onBeforeNextSlide: function (el) {},
             onBeforePrevSlide: function (el) {}
         }
-    )
+    )}
+    slider()
 })
