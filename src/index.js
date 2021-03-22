@@ -44,7 +44,7 @@ import "/components/form-elements/comment-block/comment-block.scss"
 
 // cards css
 import "/components/cards/search-card/search-card.scss"
-import "/components/cards/registration/registration.scss"
+import "/components/cards/registration/registration-card.scss"
 import "/components/cards/login-card/login-card.scss"
 import "/components/cards/booking-card/booking-card.scss"
 import "/components/cards/room-card/room-card.scss"
