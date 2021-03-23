@@ -6,8 +6,11 @@
 
     padding: 30px 0;
   .search-menu{
+    display: block;
     min-width: 266px;
     max-width: 266px;
+    background: #FFFFFF;
+    z-index: 100;
 
     margin-right: 60px;
     &__title{
@@ -49,5 +52,109 @@
         column-gap: 12px;
         row-gap: 8px;
       }
+  }
+}
+// Functional
+.search-menu-open {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  background: $DarkShade50;
+  opacity: .3;
+  height: 100%;
+  width: 50px;
+  &__marker {
+    color: $DarkShade75;
+    position: absolute;
+    font-size: 50px;
+    top: 40%;
+    transform: rotate(-90deg);
+  }
+}
+
+.search-menu.slide{
+  left: 50px;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  position: fixed;
+  z-index: 6000;
+
+  overflow-y: scroll;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.no-scroll{
+  overflow: hidden;
+  position: static;
+}
+
+@media (max-width: 1920px) {}
+@media (max-width: 1600px) {}
+@media (max-width: 1440px) {}
+@media (max-width: 1200px) {
+  .search-body {
+    &__rooms-page {
+      grid-template-columns: repeat(2, 270px) !important;
+    }
+  }
+}
+@media (max-width: 1024px) {
+
+  .container{
+    padding: 70px 50px 0;
+  }
+}
+@media (max-width: 918px) {
+  .search-room{
+    &-container{
+      display: flex;
+      justify-content: center;
+    }
+    .search-menu{
+      display: none;
+    }
+  }
+
+
+  .search-menu-open{
+    display: block;
+    &__marker{}
+  }
+}
+@media (max-width: 640px) {
+  .search-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__rooms-page {
+      grid-template-columns: repeat(2, 250px) !important;
+      column-gap: 5px
+    }
+  }
+}
+@media (max-width: 600px) {
+  .search-body {
+    &__rooms-page {
+      grid-template-columns: repeat(1, 250px) !important;
+      column-gap: 0;
+    }
+  }
+}
+@media (max-width: 440px) {}
+@media (max-width: 376px) {
+  .search-menu-open{
+    width: 35px;
+    &__marker{
+      left: -7px;
+    }
+  }
+  .search-menu.slide{
+    left: 35px;
   }
 }
