@@ -60,6 +60,8 @@ import "/components/form-elements/masked-text-field/masked-text-field.js"
 import "/components/form-elements/filter-date-dropdown/filter-date-dropdown.js"
 import "/components/cards/room-card/room-card.js"
 
+import "/pages/search-room-menu.js"
+
 // Media
 import "/styles/media.scss"
 
