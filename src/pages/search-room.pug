@@ -9,9 +9,11 @@ include ../components/form-elements/dropdown/dropdown
 include ../components/cards/room-card/room-card
 
 block content
-    .container
+    .container.search-room-container
         section.search-room
             // Menu
+            aside.search-menu-open
+                span.search-menu-open__marker.material-icons expand_more
             aside.search-menu
                 .search-menu__date-filter
                     span.search-menu__title даты пребывания в отеле
