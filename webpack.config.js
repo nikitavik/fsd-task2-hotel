@@ -44,7 +44,7 @@ module.exports = {
         // new WriteFilePlugin(),
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname,"src/img"), to: path.resolve(__dirname,"dist/img") },
+                { from: path.resolve(__dirname,"assets/img"), to: path.resolve(__dirname,"dist/img") },
             ],
 
 
