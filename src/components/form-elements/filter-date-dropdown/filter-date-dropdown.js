@@ -19,7 +19,7 @@ $(document).ready(function () {
     const filterDatePicker = filterDateInput.datepicker({
         classes: "filter-date",
         // inline: true,
-        // keyboardNav: true,
+        keyboardNav: true,
         clearButton: true,
         offset: 5,
         range: true,
@@ -27,6 +27,7 @@ $(document).ready(function () {
         dateFormat:"dd M",
         todayButton: true,
         disableNavWhenOutOfRange: false,
+        selectOtherMonths: false,
         minDate: new Date(),
         nextHtml: "<div class='material-icons date-dropdown__forward' style='color: #BC9CFF'>arrow_forward</div>",
         prevHtml: "<div class='material-icons date-dropdown__backward' style='color: #BC9CFF'>arrow_backward</div>",
@@ -37,9 +38,15 @@ $(document).ready(function () {
                     classes: 'date-dropdown__day',
                 }
             }
+        },
+        onHide: ()=> {
+            if (filterDateInput.hasClass("active")) {
+                filterDateInput.removeClass("active")
+            }
+            $(".filter-date-hidden-input").val(filterDatePicker.data("datepicker").selectedDates)
         }
     })
-    var filterDate = filterDatePicker.data("datepicker")
+    filterDate = filterDatePicker.data("datepicker")
 
     //  Full Click Ability
 
@@ -63,5 +70,35 @@ $(document).ready(function () {
         filterDateInput.removeClass("active")
     })
     buttons.toJqArray()[1].html("<button class='borderless-button'>Отчистить</button>")
+
+
+        // Range Settings
+
+    $(".datepicker").click(function (){
+        const inRange = $(".-in-range-")
+        const from = $(".-range-from-")
+        const to = $(".-range-to-")
+        const selected = $(".-selected-")
+        inRange.each(function () {
+                $(this).append("<span class='datepicker__date-range'></span>")
+            }
+        )
+        if (inRange.length > 0 || selected.length === 2) {
+            from.each(function () {
+                    $(this).append("<span class='datepicker__date-range_from'></span>")
+                }
+            )
+        }
+        to.each(function () {
+                $(this).append("<span class='datepicker__date-range_to'></span>")
+            }
+        )
+        if (selected.length < 2 && !(from.length < 1 || to.length < 1)){
+            filterDate.clear()
+        }
+    })
+
 })
+
+
 
