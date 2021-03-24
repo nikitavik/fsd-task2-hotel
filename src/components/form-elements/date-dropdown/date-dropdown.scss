@@ -56,8 +56,32 @@
   // Datepicker
 
 .datepicker{
+  z-index: 98989898 !important;
   font-family: $Montserrat !important;
   min-width: 320px;
+  &__date-range{
+    position: absolute;
+    min-width: 40px;
+    min-height: 40px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+    &_from{
+      position: absolute;
+      right: 0;
+      min-width: 20px;
+      min-height: 40px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      opacity: 0.25;
+    }
+    &_to{
+      position: absolute;
+      left: 0;
+      min-width: 20px;
+      min-height: 40px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      opacity: 0.25;
+    }
+  }
   &--nav{
     padding: 0 !important;
     border: none !important;
@@ -125,8 +149,13 @@
     font-weight: bold;
   }
   &.-in-range-{
-    position: relative;
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25)) !important;
+    background: none !important;
+  }
+  &.-other-month-{
+    color: $DarkShade25 !important;
+  }
+  &.-focus-{
+    border-radius: 22px !important;
   }
 }
 
