@@ -12,25 +12,7 @@
     line-height: (29/26);
   }
   &__date{
-    min-width: 378px;
     padding: 21px 30px 0 30px;
-  }
-  &__date-dropdown{
-    display: inline-block;
-    min-width: 150px;
-  }
-  &__date-text{
-    font-weight: bold;
-    font-size: 12px;
-    line-height: (15/12);
-    text-transform: uppercase;
-    &_right{
-      font-weight: bold;
-      font-size: 12px;
-      line-height: (15/12);
-      text-transform: uppercase;
-      padding-left: 100px
-    }
   }
   &__guests{
     padding: 20.5px 30px 0 30px;
