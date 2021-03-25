@@ -26,7 +26,7 @@ module.exports = {
     },
     devServer: {
         overlay: true,
-        contentBase: path.join(__dirname,"dist")
+        contentBase: path.join(__dirname,"assets")
 
     },
     plugins: [
