@@ -1,50 +1,48 @@
 @import "src/styles/main";
 .date-dropdown {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   max-width: 320px;
 
-  position: relative;
   &__block{
+    width: 47%;
   }
-
-  &__input, &__alternative {
-    display: inline-block;
+  &__title{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: (15/12);
+    text-transform: uppercase;
+  }
+  &__field{
+    position: relative;
+  }
+  &__input{
     max-width: 150px;
 
     padding: 9px 0 9px 15px;
-    box-sizing: border-box;
+
     border: 1px solid $DarkShade25;
     border-radius: 4px;
     background: #FFFFFF;
     cursor: pointer;
+    &::placeholder{
+      font-size: 14px;
+      line-height: (18/14);
+      color: $DarkShade75;
+    }
   }
-  &__alternative{margin-left: 20px}
-  &__input::placeholder, &__alternative::placeholder{
-    font-size: 14px;
-    line-height: (18/14);
-    color: $DarkShade75;
-  }
-
   &__expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+
     min-width: 44px;
     min-height: 44px;
 
-    left: 115px;
-    top: 10px;
-
-    color: $DarkShade50;
-    cursor: pointer;
-  }
-  &__expand-alt {
-    position: absolute;
-    min-width: 44px;
-    min-height: 44px;
-
-    right: -10px;
-    top: 10px;
+    top: 0;
+    right: 0;
 
     color: $DarkShade50;
     cursor: pointer;
@@ -147,6 +145,8 @@
     border-radius: 22px !important;
     color: #FFFFFF !important;
     font-weight: bold;
+
+    z-index: 1000 !important;
   }
   &.-in-range-{
     background: none !important;
@@ -168,5 +168,19 @@
 
 
 
-
+// Media
+@media (max-width: 375px) {
+  .date-dropdown{
+    &__input{
+      max-width: 115px;
+      padding-left: 8px;
+      &::placeholder{
+        font-size: 13px;
+      }
+    }
+    &__expand{
+      right: -6px;
+    }
+  }
+}
 
