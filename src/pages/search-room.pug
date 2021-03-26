@@ -20,7 +20,7 @@ block content
                     +filterDateDropdown("search-action", "Выберите дату", "search-menu-filter")
                 .search-menu__dropdown
                     span.search-menu__title гости
-                    +dropdown("search-form-guest", "Сколько Гостей?", "dropdown-search-form-guest",
+                    +dropdown("guest", "Сколько Гостей?",
                             [{opName: "Взрослые", op: "adult"},
                             {opName: "Дети", op: "children"},
                             {opName: "Младенцы", op: "toddler"}]
@@ -41,10 +41,10 @@ block content
                         {name: "invalid-sup", nameText: "Помощник для инвалидов", subText: "На 1 этаже вас встретит специалист и проводит до номера."}])
                 .search-menu__dropdown
                     span.search-menu__title удобства номера
-                    +dropdown("search-form-facilities", "Сколько Гостей?", "dropdown-search-form-facilities",
-                            [{opName: "Взрослые", op: "adult"},
-                            {opName: "Дети", op: "children"},
-                            {opName: "Младенцы", op: "toddler"}]
+                    +dropdown("facility", "Выберете удобства",
+                            [{opName: "Спальни", op: "sleeping-room"},
+                            {opName: "Кровати", op: "bed"},
+                            {opName: "Ванные комнаты", op: "bathroom"}]
                     )
                 .search-menu__expandable-checkbox
                     +expandCheckbox("search-action", "дополнительные удобства", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
