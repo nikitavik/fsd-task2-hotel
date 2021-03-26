@@ -1,22 +1,22 @@
 include ../borderless-button/borderless-button
-mixin dropdown (form,text, name, options)
-    .dropdown
-        .dropdown__field
-            span.dropdown__text= text
+mixin dropdown (data, text, options)
+    .dropdown(data-dropdown=data)
+        .dropdown__field(data-dropdown-field)
+            span.dropdown__text(data-dropdown-text)= text
             span(class="material-icons dropdown__expand") expand_more
-        .dropdown__options
+        .dropdown__options(data-dropdown-options)
             for option in options
-                .dropdown__option
+                .dropdown__option(data-dropdown-option)
                     span= option.opName
                     .dropdown__option-buttons(class=option.op)
-                        .dropdown__minus(class=option.op)
+                        .dropdown__minus(data-dropdown-minus)
                             span.dropdown__sign -
-                        .dropdown__counter(class=option.op) 0
-                        input.dropdown__input(type="hidden" form=form name=option.op value="0")
-                        .dropdown__plus
-                            span.dropdown__sign(class=option.op) +
+                        .dropdown__counter(class=option.op data-dropdown-counter) 0
+                        input.dropdown__input(type="hidden" name=option.op value="0" data-dropdown-input)
+                        .dropdown__plus(data-dropdown-plus)
+                            span.dropdown__sign +
             .dropdown__buttons
-                .dropdown__confirm
+                .dropdown__confirm(data-dropdown-confirm-button)
                     +borderlessBtn("применить", "d-confirm killed")
-                .dropdown__clear
+                .dropdown__clear(data-dropdown-clear-button)
                     +borderlessBtn("отчистить", "d-clear killed")

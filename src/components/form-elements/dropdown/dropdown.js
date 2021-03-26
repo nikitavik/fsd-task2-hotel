@@ -1,66 +1,98 @@
-$(document).ready(function (){
-    $(".dropdown__field").click(function () {
-        $(".dropdown__options").slideToggle()
-        $(".dropdown__field").toggleClass("expand")
-    })
+$(document).ready(function () {
+    $.fn.dropdown = function (type) {
+        // Slide Toggle
+        const opBlock = $(this).find("[data-dropdown-options]")
+        const field = $(this).find("[data-dropdown-field]")
+        field.click(function () {
+            opBlock.slideToggle({start: ()=> {field.toggleClass("expand")}})
+        })
 
-    const counters = document.getElementsByClassName("dropdown__counter")
-    const inputs = document.getElementsByClassName("dropdown__input")
-    const text = document.getElementsByClassName("dropdown__text")
+        // Main
+        const confirm = $(this).find("[data-dropdown-confirm-button]")
+        const clear = $(this).find("[data-dropdown-clear-button]")
+        const counters = $(this).find("[data-dropdown-counter]")
+        const inputs = $(this).find("[data-dropdown-input]")
+        const text = $(this).find("[data-dropdown-text]")
 
-    const plus = document.getElementsByClassName("dropdown__plus")
-    const minus = document.getElementsByClassName("dropdown__minus")
-    const clear = document.getElementsByClassName("d-clear")
-    const confirm = document.getElementsByClassName("d-confirm")
-    
-    const dropdown = {
-        plus :function (option) {
-            let i = counters[option].innerHTML
-            counters[option].innerHTML = parseInt(i) + 1
-            confirm[0].classList.remove("killed")
-            },
-        minus: function (option) {
-            let i = counters[option].innerHTML
-            if (i > 0){
-                counters[option].innerHTML = parseInt(i) - 1
+        // Every count
+        this.click(function () {
+            let total = 0
+            counters.each(function (index) {
+                total += parseInt(counters[index].innerHTML)
+            })
+            console.log(total)
+            if (total === 0) {
+                clear.css("display", "none")
+                confirm.css("display", "none")
+            } else {
+                clear.css("display", "block")
+                confirm.css("display", "block")
             }
-            },
-        clear: function () {
-            for (let i = 0; i < counters.length; i++){
-                counters[i].innerHTML = 0
-                inputs[i].value = 0
-                text[0].innerHTML = "Сколько Гостей?"
+        })
+
+        // Buttons Clicks
+        confirm.click(function () {
+            counters.each(function () {
+                inputs.val(counters.html())
+            })
+            opBlock.slideToggle({start: ()=> {field.toggleClass("expand")}})
+            // Write
+            if (type === "guest"){
+                let guest
+                let total = 0
+                counters.each(function (index) {
+                    total += parseInt(counters[index].innerHTML)
+                })
+                switch (true) {
+                    case total === 1:
+                        guest = "Гость"
+                        break
+                    case total <= 4:
+                        guest = "Гостя"
+                        break
+                    default:
+                        guest = "Гостей"
+                }
+                text.html(`${total} ${guest}`)
             }
+        })
 
-            clear[0].classList.add("killed")
-        },
-        confirm: function (inputs) {
-            total = 0
-            for (let i = 0; i < counters.length; i++){
-                total = total + parseInt(counters[i].innerHTML)
-                inputs[i].value = counters[i].innerHTML
-            }
-            let guest
-                if (total <= 4 ) guest = "Гостя"
-                else if (total === 1) guest = "Гость"
-                else guest = "Гостей"
-            text[0].innerHTML = `${total} ${guest}`
-            if (total === 0) {dropdown.clear()}
-        }
-    }
-    // Подключение функций
-    for (let i = 0; i < counters.length; i++){
-        plus[i].onclick = function () {dropdown.plus(i); clear[0].classList.remove("killed")}
-        minus[i].onclick = function () {dropdown.minus(i)}
-    }
-    clear[0].onclick = function () {
-        dropdown.clear()
-        $(".dropdown__options").slideToggle()
-    }
-    confirm[0].onclick = function () {
-        dropdown.confirm(inputs)
-        $(".dropdown__options").slideToggle()
+        clear.click(function () {
+            counters.each(function () {
+                counters.html(0)
+                text.html("Сколько Гостей?")
+                inputs.val("")
+            })
+        })
+
+        // Options
+        const options = $(this).find("[data-dropdown-option]")
+        options.each(function(){
+            let counter = $(this).find("[data-dropdown-counter]")
+            const plus = $(this).find("[data-dropdown-plus]")
+            const minus = $(this).find("[data-dropdown-minus]")
+            plus.click(function (){
+                let number = counter.html()
+                number = parseInt(number) + 1
+                counter.html(number)
+            })
+            minus.click(function (){
+                let number = counter.html()
+                if (number > 0){
+                    number = parseInt(number) - 1
+                    counter.html(number)
+                }
+            })
+        })
+
     }
 
 
+    $("[data-dropdown=guest]").dropdown("guest")
+    $("[data-dropdown=test]").dropdown("guest")
+    $("[data-dropdown=search-card]").dropdown("guest")
+
+    $("[data-dropdown=facility]").dropdown("facility")
 })
+
+

@@ -104,9 +104,11 @@
     justify-content: space-between;
   }
   &__confirm{
+    display: none;
     margin: 0 7px 4px 0;
   }
   &__clear{
+    display: none;
     margin-left: 14px;
   }
   &__sign{vertical-align: middle}
@@ -115,8 +117,5 @@
 .dropdown{
   .disabled{
     border: 1px solid $DarkShade25;
-  }
-  .killed{
-    display: none;
   }
 }
