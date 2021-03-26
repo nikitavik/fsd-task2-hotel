@@ -1,5 +1,5 @@
-mixin arrButton(btnText, btnClass, form, name)
-    lable.arrow-button(for=name)
-        button(type="submit" form=form id=name name=name).arrow-button__button= btnText
-            .arrow-button__arrow.material-icons arrow_forward
+mixin arrButton(btnText, btnClass, form)
+   .arrow-button
+        button.arrow-button__button(type="submit" form=form)= btnText
+            span.arrow-button__arrow.material-icons arrow_forward
 

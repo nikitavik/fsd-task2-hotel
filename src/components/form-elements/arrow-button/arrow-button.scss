@@ -19,9 +19,12 @@
   }
   &__arrow{
     position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 44px;
     min-height: 44px;
-    top: 10px;
+    top: 0;
     right: 0;
 
     color: #FFFFFF;
