@@ -1,6 +1,6 @@
 include ../like-button/like-button
 
-mixin commentBlock(userImg, userName, time, text)
+mixin commentBlock(userImg, userName, time, text, name)
     .comment-block
         .comment-block-header
             .comment-block-header__image
@@ -11,5 +11,5 @@ mixin commentBlock(userImg, userName, time, text)
                 .comment-block-header__time=time
         .comment-block-body
             .comment-block-body__like
-                +likeBtn("action","test-comment-like", 12, true)
+                +likeBtn("action",`test-comment-like-${name}`, 12, false)
             .comment-block-body__text=text
