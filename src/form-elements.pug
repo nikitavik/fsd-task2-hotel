@@ -52,7 +52,13 @@ html(lang="ru")
                         +textField("","text-field-test2", "This is pretty awesome", "test-form", "text-test2", "This is pretty awesome", true, )
                     span.element-name dropdown
                     .dropdown-wrapper
-                        +dropdown("test-form", "Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", op:"adult"},{opName:"Дети", op:"children"},{opName:"Младенцы", op:"toddler"}])
+                        +dropdown("test", "Сколько Гостей?",
+                            [
+                                {opName:"Взрослые", op:"adult"},
+                                {opName:"Дети", op:"children"},
+                                {opName:"Младенцы", op:"toddler"}
+                            ]
+                            )
                     span.element-name Masked text field
                     .masked-text-field-wrapper
                         +maskedField("test-form", "masked-test", "ДД.ММ.ГГГГ","test", "", true)
@@ -154,6 +160,7 @@ html(lang="ru")
                         +iconTextList([{icon: 'insert_emoticon', text:"Комфорт", subText: "Шумопоглощающие стены"},{icon: 'location_city', text:"Удобство", subText: "Окно в каждой из спален"}])
                 .comment-block-wrapper
                         +commentBlock("user", "Мурад Сарафанов",
-                            "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+                            "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                        "test")
 
 
