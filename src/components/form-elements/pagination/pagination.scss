@@ -4,6 +4,7 @@
   align-items: center;
   flex-flow: column;
   &-container{
+    padding-bottom: 10px;
   }
   &-subtext{
     color: $DarkShade75;
