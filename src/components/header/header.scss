@@ -15,7 +15,7 @@
 
   background: #FFFFFF;
   box-shadow: 0 10px 20px $DarkShade5;
-  .header-menu{
+  &-menu{
     display: none;
     color: $DarkShade50;
   }
@@ -30,7 +30,7 @@
       .nav-list{
         display: flex;
         list-style-type: none;
-        .nav-list__item{
+        &__item{
           padding-right: 20px;
           display: inline;
 
@@ -38,7 +38,7 @@
           line-height: (17/14);
           color: $DarkShade50;
         }
-        .nav-list__item_with-arrow{
+        &__item_expand{
           position: relative;
           display: inline;
           padding-right: 44px;
@@ -46,14 +46,33 @@
           font-size: 14px;
           line-height: (17/14);
           color: $DarkShade50;
+
+          &:hover > .nav-list__item-list{
+            display: block;
+          }
         }
-        .nav-list__mark{
+        &__item-list{
+          display: none;
+          position: absolute;
+          width: 150px;
+          left: -5px;
+          background: #FFFFFF;
+
+
+          border-radius: 4px;
+          &:hover{display: block;}
+          .nav-list__item{
+            display: block;
+            padding: 12px 16px 12px 5px;
+          }
+        }
+        &__mark{
           position: absolute;
           font-size: 24px;
           line-height: (20/24);
           color: $DarkShade50;
         }
-        .nav-list__text{
+        &__text{
           white-space: nowrap;
         }
       }
