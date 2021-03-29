@@ -2,35 +2,42 @@ include ../../form-elements/date-dropdown/date-dropdown
 include ../../form-elements/dropdown/dropdown
 include ../../form-elements/arrow-button/arrow-button
 
-.booking-card.card
+.booking-card
     h2.booking-card__title
-        span.booking-card__title-number-sign №
-        spam.booking-card__title-number 888
-        span.booking-card__title-class люкс
-        span.booking-card__title-cost 9 990₽
-        span.booking-card__title-day  в сутки
-    .booking-card__form
+        .booking-card__title-number-block
+            span.booking-card__title-number-sign №
+            spam.booking-card__title-number 888
+            span.booking-card__title-class люкс
+        .booking-card__title-cost-block
+            span.booking-card__title-cost 9 990₽
+            span.booking-card__title-day  в сутки
+    form(action="#", id="registration-card-form" target, method="post").booking-card__form
         .booking-card__date-dropdown-block
-            .booking-card__date-dropdown
-                span.booking-card__date-dropdown-title Прибытие
-                span.booking-card__date-dropdown-title Выезд
-                +dateDropdown("ДД.ММ.ГГГГ", "search-card-dropdown")
+            +dateDropdown("ДД.ММ.ГГГГ", "search-card-dropdown")
         .booking-card__dropdown
             span.booking-card__dropdown-title Гости
-            +dropdown("booking-form", "Сколько Гостей?", "dropdown-test", [{opName:"Взрослые", op:"adult"},{opName:"Дети", op:"children"},{opName:"Младенцы", op:"toddler"}])
+            +dropdown("booking", "Сколько Гостей?",
+                [
+                    {opName:"Взрослые", op:"adult"},
+                    {opName:"Дети", op:"children"},
+                    {opName:"Младенцы", op:"toddler"}
+                ]
+            )
         .booking-card__price-list
             .booking-card__price
                 span.booking-card__price-name 9 990₽ х 4 суток
                 span.booking-card__price-number 39 960₽
             .booking-card__price
-                span.booking-card__price-name Сбор за услуги: скидка 2 179₽
-                .booking-card__mark-container
-                    span.booking-card__mark i
+                .booking-card__price-name
+                    .booking-card__price-text Сбор за услуги: скидка 2 179₽
+                    .booking-card__mark-container
+                        span.booking-card__mark i
                 span.booking-card__price-number 0₽
             .booking-card__price
-                span.booking-card__price-name Сбор за дополнительные услуги
-                .booking-card__mark-container
-                    span.booking-card__mark i
+                .booking-card__price-name
+                    .booking-card__price-text Сбор за доп. услуги
+                    .booking-card__mark-container
+                        span.booking-card__mark i
                 span.booking-card__price-number 300₽
         .booking-card__total
             span.booking-card__total-name Итого
