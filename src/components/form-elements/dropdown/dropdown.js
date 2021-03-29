@@ -91,6 +91,8 @@ $(document).ready(function () {
     $("[data-dropdown=guest]").dropdown("guest")
     $("[data-dropdown=test]").dropdown("guest")
     $("[data-dropdown=search-card]").dropdown("guest")
+    $("[data-dropdown=booking]").dropdown("guest")
+
 
     $("[data-dropdown=facility]").dropdown("facility")
 })
