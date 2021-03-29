@@ -5,14 +5,14 @@ include ../components/form-elements/bullet-list/bullet-list
 
 
 block content
-    .container
+    section.img-block
+        .img-block__main-img
+            img.img-block__img(src="./img/rooms/room888/room888big.png")
+        .img-block__imgs
+            img.img-block__img(src="./img/rooms/room888/room888small.png")
+            img.img-block__img(src="./img/rooms/room888/room888small2.png")
+    .container.room-details-container
         .room-details
-            section.img-block
-                .img-block__main-img
-                    img(src="./img/rooms/room888/room888big.png")
-                .img-block__min-imgs
-                    img(src="./img/rooms/room888/room888small.png")
-                    img(src="./img/rooms/room888/room888small2.png")
             section.room-block
                 .main-field
                     .main-field-info-section
@@ -37,7 +37,7 @@ block content
                                 "comment1")
                             +commentBlock("user2", "Патрисия Стёклышкова",
                                 "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.",
-                                "comment2")
+                                "comment2 ")
                     .main-field-rules-section
                         .main-field__rules
                             .main-field__title Правила
