@@ -1,14 +1,21 @@
-.room-details{
-  .img-block{
-    display: flex;
-    margin: 0 -140px;
-    position: relative;
-    max-width: 1920px;
-    width: 100vw;
-    &__main-img{}
-    &__min-imgs{}
+.img-block{
+  display: flex;
+  position: relative;
+  max-width: 1920px;
+  top: 70px;
+  &__main-img{
+    width: 68.125%;
   }
+  &__imgs{
+   width: 31.875%;
+  }
+  &__img{
+    min-width: 100%;
+    object-fit: cover;
+  }
+}
 
+.room-details{
   .room-block{
     padding: 70px 0;
 
@@ -27,6 +34,7 @@
         line-height: (23/19);
       }
       &__subtitle{
+        white-space: nowrap;
         padding-bottom: 20px;
 
         font-size: 14px;
@@ -53,6 +61,7 @@
         padding-bottom: 30px;
         &__title{
           display: flex;
+          flex-flow: row wrap;
           justify-content: space-between;
           align-items: flex-end;
         }
@@ -79,6 +88,63 @@
 
     .card-field{
       padding-left: 100px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .room-details {
+    .room-block {
+      flex-direction: column-reverse;
+    }
+  }
+  .card-field{
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 1024px) {}
+@media (max-width: 918px) {}
+@media (max-width: 640px) {}
+@media (max-width: 600px) {
+  .card-field{
+    padding-left: 0!important;
+    display: flex;
+    align-self: center;
+  }
+  .main-field {
+    &__rating{
+      padding-left: 0 !important;
+    }
+    &-info-section {
+      flex-direction: column !important;
+      align-items: center;
+    }
+
+    &-comment-section {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    &-rules-section {
+      align-items: flex-start;
+    }
+    &__rules{
+      min-width: 160px;
+    }
+    &__cancel{
+      padding-left: 0 !important;
+    }
+  }
+  .container.room-details-container{
+    padding: 70px 5px 0 !important;
+  }
+}
+@media (max-width: 440px) {}
+@media (max-width: 376px) {
+  .card-field{
+    .card-wrapper{
+      max-width: 310px;
     }
   }
 }
