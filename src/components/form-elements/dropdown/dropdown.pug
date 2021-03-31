@@ -2,7 +2,7 @@ include ../borderless-button/borderless-button
 mixin dropdown (data, text, options)
     .dropdown(data-dropdown=data)
         .dropdown__field(data-dropdown-field)
-            span.dropdown__text(data-dropdown-text)= text
+            input.dropdown__text(data-dropdown-text value=text readonly)
             span(class="material-icons dropdown__expand") expand_more
         .dropdown__options(data-dropdown-options)
             for option in options
@@ -12,7 +12,7 @@ mixin dropdown (data, text, options)
                         .dropdown__minus(data-dropdown-minus)
                             span.dropdown__sign -
                         .dropdown__counter(class=option.op data-dropdown-counter) 0
-                        input.dropdown__input(type="hidden" name=option.op value="0" data-dropdown-input)
+                        input.dropdown__input(type="hidden" name=`dropdown-${option.op}` value="0" data-dropdown-input)
                         .dropdown__plus(data-dropdown-plus)
                             span.dropdown__sign +
             .dropdown__buttons

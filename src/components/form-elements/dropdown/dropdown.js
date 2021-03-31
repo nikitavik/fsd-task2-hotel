@@ -36,6 +36,7 @@ $(document).ready(function () {
                 inputs.val(counters.html())
             })
             opBlock.slideToggle({start: ()=> {field.toggleClass("expand")}})
+
             // Write
             if (type === "guest"){
                 let guest
@@ -53,16 +54,35 @@ $(document).ready(function () {
                     default:
                         guest = "Гостей"
                 }
-                text.html(`${total} ${guest}`)
+                text.val(`${total} ${guest}`)
+            }
+            if (type === "facility"){
+                let facilities = ["Спальни", "Кровати", "Ванные комнаты"]
+                let total = []
+                counters.each(function (index) {
+                    if (counters[index].innerHTML > 0){
+                        total.push(`${counters[index].innerHTML} ${facilities[index]}`)
+                    }
+                })
+                text.val(total)
             }
         })
 
         clear.click(function () {
-            counters.each(function () {
-                counters.html(0)
-                text.html("Сколько Гостей?")
-                inputs.val("")
-            })
+            if (type === "guest") {
+                counters.each(function () {
+                    counters.html(0)
+                    text.val("Сколько Гостей?")
+                    inputs.val("")
+                })
+            }
+            if (type === "facility"){
+                counters.each(function () {
+                    counters.html(0)
+                    text.val("Выберите удобства")
+                    inputs.val("")
+                })
+            }
         })
 
         // Options
