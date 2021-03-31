@@ -95,6 +95,7 @@
 @media (max-width: 1200px) {
   .room-details {
     .room-block {
+      align-items: center;
       flex-direction: column-reverse;
     }
   }
@@ -140,7 +141,11 @@
     padding: 70px 5px 0 !important;
   }
 }
-@media (max-width: 440px) {}
+@media (max-width: 440px) {
+  .room-block{
+    padding: 20px 0 !important;
+  }
+}
 @media (max-width: 376px) {
   .card-field{
     .card-wrapper{
