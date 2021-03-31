@@ -1,5 +1,7 @@
+// Main CSS
+
 import "/styles/reset.scss"
-// import "/styles/main.scss"
+import "/styles/main.scss"
 import "/styles/index.scss"
 import "/styles/cards.scss"
 import "/styles/form-elements.scss"
