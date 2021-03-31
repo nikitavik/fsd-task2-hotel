@@ -61,7 +61,7 @@ $(document).ready(function () {
                 let total = []
                 counters.each(function (index) {
                     if (counters[index].innerHTML > 0){
-                        total.push(`${counters[index].innerHTML} ${facilities[index]}`)
+                        total.push(` ${counters[index].innerHTML} ${facilities[index]}`)
                     }
                 })
                 text.val(total)
