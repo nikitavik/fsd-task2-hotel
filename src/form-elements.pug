@@ -21,9 +21,6 @@ include ./components/form-elements/masked-text-field/masked-text-field
 include ./components/form-elements/comment-block/comment-block
 include ./components/form-elements/filter-date-dropdown/filter-date-dropdown
 
-
-
-
 doctype html
 html(lang="ru")
     head
@@ -62,15 +59,11 @@ html(lang="ru")
                     span.element-name Masked text field
                     .masked-text-field-wrapper
                         +maskedField("test-form", "masked-test", "ДД.ММ.ГГГГ","test", "", true)
-                    span.element-name date dropdown
 
                     // Date
-
                     .date-blocks
                         .date-dropdown-wrapper
                             +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
-                        .date-dropdown-wrapper
-                            //+dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
                     span.element-name filter date dropdown
                     .filter-date-dropdown-wrapper
                         +filterDateDropdown("action", "Выберете дату", "filter-test")
