@@ -4,13 +4,11 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
-// const WriteFilePlugin = require('write-file-webpack-plugin')
 const webpack = require("webpack")
-const PAGES_DIR = path.resolve(__dirname, "src")
-const PROD_DIR = path.resolve(__dirname, "src/pages")
+const PAGES_MAIN_DIR = path.resolve(__dirname, "src")
+const PAGES_DIR = path.resolve(__dirname, "src/pages")
+const PAGES_MAIN = fs.readdirSync(PAGES_MAIN_DIR).filter(fileName => fileName.endsWith('.pug'))
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
-const PROD_PAGES = fs.readdirSync(PROD_DIR).filter(fileName => fileName.endsWith('.pug'))
-// const Inputmask=(typeof(window)!="undefined")?require("inputmask"):{};
 
 module.exports = {
     context: path.resolve(__dirname, "src"),
@@ -49,12 +47,12 @@ module.exports = {
 
 
         }),
-        ...PAGES.map(page => new HTMLWebpackPlugin({
-            template: `${PAGES_DIR}/${page}`,
+        ...PAGES_MAIN.map(page => new HTMLWebpackPlugin({
+            template: `${PAGES_MAIN_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`
         })),
-        ...PROD_PAGES.map(page => new HTMLWebpackPlugin({
-            template: `${PROD_DIR}/${page}`,
+        ...PAGES.map(page => new HTMLWebpackPlugin({
+            template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`
         }))
 
