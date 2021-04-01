@@ -1,32 +1,28 @@
-// require("paginationjs")
-//         require("../../cards/room-card/room-card")
-//         $(document).ready(function () {
-//             // const data = $(".room-card")
-//             //
-//             // function template(data) {
-//             //     let html = []
-//             //     for (let i = 0; i < data.length; i++){
-//             //         html.push(data[i])
-//             //     }
-//             //     return html
-//             // }
-//
-//             const container = $(".pagination-container")
-//             const pagination = container.pagination({
-//                 dataSource: [1, 2, 3], //template(data)
-//                 pageSize: 1,
-//                 autoHidePrevious: true,
-//                 autoHideNext: true,
-//                 nextText: "",
-//                 prevText: "",
-//
-//                 callback: function(data, pagination) {
-//                     // const html = template(data);
-//                     // $('#data-container').html(html);
-//                     // console.log(html)
-//                 },
-//                 afterPaging: function () {
-//
-//                 }
-//             })
-//         })
+require("paginationjs")
+require("../../cards/room-card/room-card")
+$(document).ready(function () {
+    function simpleTemplating(data) {
+        var html = '<ul>';
+        $.each(data, function(index, item){
+            html += '<li>'+ item +'</li>';
+        });
+        html += '</ul>';
+        return html;
+    }
+    if ($("[data-pagination]").length){
+    const container = $("[data-pagination]")
+    const pagination = container.pagination({
+        dataSource: [1, 2, 3, 4],
+        pageSize: 1,
+        autoHidePrevious: true,
+        autoHideNext: true,
+        nextText: "<span class='material-icons pagination__next'>arrow_forward</span>",
+        prevText: "<span class='material-icons pagination__back'>arrow_backward</span>",
+
+        callback: function(data, pagination) {
+            const html = simpleTemplating(data);
+            $("[data-data-container]").html(html)
+        }
+    })
+    }
+})
