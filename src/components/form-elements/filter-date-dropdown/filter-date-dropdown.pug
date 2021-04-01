@@ -1,5 +1,5 @@
 mixin filterDateDropdown (action, text, name)
-    form.filter-date-dropdown(action=action method="get")
-        input.filter-date-dropdown__input(placeholder= text spellcheck="false" readonly)
+    .filter-date-dropdown
+        input.filter-date-dropdown__input(data-filter-date-input placeholder= text spellcheck="false" readonly)
         span.filter-date-dropdown__expand.material-icons expand_more
-        input.filter-date-hidden-input(type="hidden" name=name value="")
+        input.filter-date-hidden-input(data-filter-date-hidden-input type="hidden" name=name value="")
