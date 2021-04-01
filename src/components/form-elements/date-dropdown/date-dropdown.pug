@@ -1,12 +1,12 @@
 mixin dateDropdown (text, name)
-    form.date-dropdown(action="#" method="get")
+    .date-dropdown
         .date-dropdown__block
             .date-dropdown__title Прибытие
-            .date-dropdown__field
-                input.date-dropdown__input(placeholder= text spellcheck="false" readonly)
-                span.date-dropdown__expand.material-icons expand_more
+            .date-dropdown__field(data-date-dropdown)
+                input.date-dropdown__input(disabled data-date-dropdown-input placeholder=text name=name spellcheck="false" readonly)
+                span.date-dropdown__expand.material-icons(data-dropdown-expand) expand_more
         .date-dropdown__block
             .date-dropdown__title Выезд
-            .date-dropdown__field
-                input.date-dropdown__input(placeholder= text spellcheck="false" readonly)
-                span.date-dropdown__expand.material-icons expand_more
+            .date-dropdown__field(data-date-dropdown)
+                input.date-dropdown__input(data-date-dropdown-alt-input placeholder=text name=name spellcheck="false" readonly)
+                span.date-dropdown__expand.material-icons(data-dropdown-alt-expand) expand_more

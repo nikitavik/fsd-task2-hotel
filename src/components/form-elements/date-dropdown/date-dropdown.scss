@@ -70,6 +70,7 @@
       min-height: 40px;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       opacity: 0.25;
+      z-index: -50;
     }
     &_to{
       position: absolute;
@@ -78,6 +79,7 @@
       min-height: 40px;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       opacity: 0.25;
+      z-index: -50;
     }
   }
   &--nav{
@@ -127,7 +129,10 @@
 .date-dropdown__day{
   width: 40px !important;
   height: 40px !important;
+  background: none !important;
+  border: none!important;
 
+  border-radius: 22px !important;
   font-size: 12px;
   line-height: (15/12);
   color: $DarkShade50 !important;
@@ -152,7 +157,7 @@
     background: none !important;
   }
   &.-other-month-{
-    color: $DarkShade25 !important;
+    color: $DarkShade25;
   }
   &.-focus-{
     border-radius: 22px !important;
