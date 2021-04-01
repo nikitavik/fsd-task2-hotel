@@ -4,7 +4,6 @@ require("air-datepicker/dist/js/datepicker")
 $(document).ready(function () {
     if ($("[data-filter-date-input]").length) {
         const filterDateInput = $("[data-filter-date-input]")
-        
         const myFilterDate = filterDateInput.datepicker({
             classes: "filter-date",
             // inline: true,
