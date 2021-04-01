@@ -1,7 +1,17 @@
 @import "src/styles/main";
 .pagination{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &-data{
     display: none;
+  }
+  &-subtext{
+    padding-top: 10px;
+
+    font-size: 14px;
+    line-height: (24/14);
+    color: $DarkShade75;
   }
 }
 .paginationjs{
