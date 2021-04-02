@@ -1,2 +1,6 @@
-# fsd-task2-hotel
-Task 2 for FSD 
+# Toxin Hotel
+
+####Task number 2 for MetaLamp
+####You can see a hosted version on 
+####https://nikitavik.github.io/toxin.github.io/
+
