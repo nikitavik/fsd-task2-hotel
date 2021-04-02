@@ -2,7 +2,7 @@ extends layout
 include ../components/form-elements/icon-text-list/icon-text-list
 include ../components/form-elements/comment-block/comment-block
 include ../components/form-elements/bullet-list/bullet-list
-
+include ../components/form-elements/chart/chart
 
 block content
     section.img-block
@@ -27,6 +27,7 @@ block content
                         .main-field__rating
                             .main-field__title Впечатления от номера
                             .main-field__rate
+                                +Chart()
                     .main-field-comment-section
                         .main-field-comment-section__title
                             span.main-field__title Отзывы посетителей номера
