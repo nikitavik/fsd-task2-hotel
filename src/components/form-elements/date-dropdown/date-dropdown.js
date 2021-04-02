@@ -40,12 +40,12 @@ $(document).ready(function () {
             },
             onHide: ()=> {
                 dropdownField.removeClass("active")
-                    if (dropdownDate.selectedDates.length >= 2) {
+                    if (dropdownDate.selectedDates.length === 2) {
                         let date1 = dropdownDate.selectedDates[0].toLocaleDateString()
                         let date2 = dropdownDate.selectedDates[1].toLocaleDateString()
                         dateInput.attr('value', date1);
                         dateAltInput.attr('value', date2);
-                    } else dropdownDate.clear();dateAltInput.val("")
+                    }
             },
         })
 
@@ -96,7 +96,12 @@ $(document).ready(function () {
                 }
             )
             if (selected.length !== 2 && !(from.length < 1 || to.length < 1) || selected.length === 0){
-                dropdownDate.clear()
+                $(".datepicker__date-range").remove()
+                $(".datepicker__date-range_from").remove()
+                $(".datepicker__date-range_to").remove()
+            }
+            if (dropdownDate.selectedDates.length === 1){
+                dateAltInput.val("")
             }
         })
     }

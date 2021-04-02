@@ -83,7 +83,9 @@ $(document).ready(function () {
                 }
             )
             if (selected.length < 2 && !(from.length < 1 || to.length < 1) || selected.length === 0) {
-                filterDate.clear()
+                $(".datepicker__date-range").remove()
+                $(".datepicker__date-range_from").remove()
+                $(".datepicker__date-range_to").remove()
             }
         })
     }
