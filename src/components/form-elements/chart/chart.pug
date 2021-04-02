@@ -1,0 +1,22 @@
+mixin Chart()
+    .chart
+        .chart__chart
+            canvas.chartjs(data-chart width="150" height="150" aria-label="Doughnut rating chart" role="img")
+                p Your browser does not support the canvas element.
+            .chart__text
+                span.chart__text-number 260
+                span.chart__text-text голосов
+        ul.chart-legend
+            li.chart-legend__item
+                .chart-legend__mark.chart-legend__mark_gold
+                .chart-legend__text Великолепно
+            li.chart-legend__item
+                .chart-legend__mark.chart-legend__mark_green
+                .chart-legend__text Хорошо
+            li.chart-legend__item
+                .chart-legend__mark.chart-legend__mark_purple
+                .chart-legend__text Удовлетворительно
+            li.chart-legend__item
+                .chart-legend__mark.chart-legend__mark_black
+                .chart-legend__text Разочарован
+
