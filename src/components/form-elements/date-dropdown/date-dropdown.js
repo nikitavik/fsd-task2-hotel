@@ -40,11 +40,12 @@ $(document).ready(function () {
             },
             onHide: ()=> {
                 dropdownField.removeClass("active")
-
-                let date1 = dropdownDate.selectedDates[0].toLocaleDateString()
-                let date2 = dropdownDate.selectedDates[1].toLocaleDateString()
-                dateInput.attr('value', date1);
-                dateAltInput.attr('value', date2);
+                    if (dropdownDate.selectedDates.length >= 2) {
+                        let date1 = dropdownDate.selectedDates[0].toLocaleDateString()
+                        let date2 = dropdownDate.selectedDates[1].toLocaleDateString()
+                        dateInput.attr('value', date1);
+                        dateAltInput.attr('value', date2);
+                    } else dropdownDate.clear();dateAltInput.val("")
             },
         })
 
