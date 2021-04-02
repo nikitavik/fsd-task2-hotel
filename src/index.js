@@ -43,6 +43,7 @@ import "/components/form-elements/date-dropdown/date-dropdown.scss"
 import "/components/form-elements/masked-text-field/masked-text-field.scss"
 import "/components/form-elements/filter-date-dropdown/filter-date-dropdown.scss"
 import "/components/form-elements/comment-block/comment-block.scss"
+import "/components/form-elements/chart/chart.scss"
 
 // cards css
 import "/components/cards/search-card/search-card.scss"
@@ -61,6 +62,7 @@ import "/components/form-elements/date-dropdown/date-dropdown.js"
 import "/components/form-elements/masked-text-field/masked-text-field.js"
 import "/components/form-elements/filter-date-dropdown/filter-date-dropdown.js"
 import "/components/cards/room-card/room-card.js"
+import "/components/form-elements/chart/chart.js"
 
 import "/pages/search-room-menu.js"
 
