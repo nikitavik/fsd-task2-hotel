@@ -33,6 +33,12 @@ module.exports = {
     filename: filename("js"),
     path: path.resolve(__dirname, "dist"),
   },
+  resolve: {
+    alias: {
+      "@cards": path.resolve(__dirname, "src/components/form-elements/"),
+      "@forms": path.resolve(__dirname, "src/components/cards/"),
+    },
+  },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: !isDevelopment,
