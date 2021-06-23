@@ -32,3 +32,41 @@ $Montserrat: 'Conv_Montserrat-Regular', "Montserrat", Sans-Serif;
 body{
   font-family: $Montserrat;
 }
+
+
+.index{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &-title{
+    color: $Purple;
+    text-align: center;
+    @include sub-section;
+    font-size: 3rem;
+  }
+  &-subtitle{
+    color: $Green;
+    text-align: center;
+    @include widget-title;
+    font-size: 2rem;
+  }
+  &-link{
+    color: $DarkShade75 !important;
+    @include label-cta-text;
+    text-decoration: underline !important;
+    font-size: 2rem;
+  }
+  &-author{
+    color: red;
+    @include widget-title;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+
+    &__link{
+      color: $DarkShade75 !important;
+      font-size: 1.5rem;
+      text-decoration: underline !important;
+    }
+  }
+}

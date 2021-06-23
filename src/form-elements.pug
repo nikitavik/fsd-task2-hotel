@@ -43,10 +43,10 @@ html(lang="ru")
 
                     span.element-name Text field
                     .text-field-wrapper
-                        +textField("","text-field-test", "Email", "test-form", "text-test", "", true)
+                        +textField("","text-field-test", "Email", "text-test", "", true)
                     span.element-name Text field
                     .text-field-wrapper
-                        +textField("","text-field-test2", "This is pretty awesome", "test-form", "text-test2", "This is pretty awesome", true, )
+                        +textField("","text-field-test2", "This is pretty awesome", "text-test2", "This is pretty awesome", true, )
                     span.element-name dropdown
                     .dropdown-wrapper
                         +dropdown("test", "Сколько Гостей?",
@@ -58,7 +58,7 @@ html(lang="ru")
                             )
                     span.element-name Masked text field
                     .masked-text-field-wrapper
-                        +maskedField("test-form", "masked-test", "ДД.ММ.ГГГГ","test", "", true)
+                        +maskedField("masked-test", "ДД.ММ.ГГГГ","test", "", true)
 
                     // Date
                     .date-blocks
@@ -66,17 +66,17 @@ html(lang="ru")
                             +dateDropdown("ДД.ММ.ГГГГ", "date-dropdown-test")
                     span.element-name filter date dropdown
                     .filter-date-dropdown-wrapper
-                        +filterDateDropdown("action", "Выберете дату", "filter-test")
+                        +filterDateDropdown("Выберете дату", "filter-test")
                     // Subscribe
 
                     span.element-name subscription text field
                     .subscription-wrapper
-                        +subscrText("test-form","subscription text field", "email")
+                        +subscrText("subscription text field", "email")
 
                 // Column 2
                 .form-elements-box1-column
                     .checkbox-wrapper
-                        +checkBox("action", "checkbox buttons", [
+                        +checkBox("checkbox buttons", [
                             {name: "smoke",value: "canSmoke", nameText: "Можно курить"},
                             {name: "animals", value: "withAnimals", nameText: "Можно с питомцами"},
                             {name:"guests", value: "guestsAllowed" , nameText: "Можно пригласить гостей (до 10 человек)"}
@@ -84,30 +84,30 @@ html(lang="ru")
                     span.element-name Radio buttons
                     .radiobox-wrapper.pd-10
                         +radioBox([{name: "gender", value: "men", nameText: "Мужчина", checked:true},
-                            {name: "gender", value: "woman", nameText: "Женщина"}], "test-form")
+                            {name: "gender", value: "woman", nameText: "Женщина"}],)
                     span.element-name Toggle
                     .toggle-buttons.pd-10
                         .toggle-wrapper
-                            +toggle("test-form", "special", "special",  "Получать спрецпредложения", false)
+                            +toggle("special", "special",  "Получать спрецпредложения", false)
                         .toggle-wrapper.pd-10
-                            +toggle("test-form", "special-2", "special-2", "Получать спрецпредложения", true)
+                            +toggle("special-2", "special-2", "Получать спрецпредложения", true)
                     span.element-name Like Button
                     .like-buttons.pd-10
                         .like-button-wrapper
-                            +likeBtn("action","test-like", 2, false)
+                            +likeBtn("test-like", 2, false)
                         .like-button-wrapper
-                            +likeBtn("action","test-like2", 12, true)
+                            +likeBtn("test-like2", 12, true)
                     span.element-name Rate Button
                         .rate-buttons.pd-10
                             .rate-button-wrapper
-                                +rateBtn("rate-test", "action")
+                                +rateBtn("rate-test",)
                             .rate-button-wrapper
-                                +rateBtn("rate-test2", "action")
+                                +rateBtn("rate-test2",)
 
                 //Column 3
                 .form-elements-box1-column
                     .range-slider-wrapper
-                        +rangeSlider("range-slider", "action")
+                        +rangeSlider("range-slider")
 
                     //Buttons
                     span.element-name buttons
@@ -127,7 +127,7 @@ html(lang="ru")
                         .button-wrapper
                             +borderlessBtn("click me", "test-borderless")
                     .arrow-button-wrapper.button-wrapper
-                        +arrButton("перейти к оплате", "arrow-test", "text-form", "arrow-test")
+                        +arrButton("перейти к оплате", "arrow-test")
 
                     // Pagination
                     span.element-name pagination
@@ -138,10 +138,10 @@ html(lang="ru")
                 //Column1
                 .form-elements-box2-column
                     .expandable-checkbox
-                            +expandCheckbox("action", "expandable checkbox list", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
+                            +expandCheckbox("expandable checkbox list", [{nameText:"Завтрак", name:"breakfast", value:"breakfast"},{nameText:"Письменный стол", name:"table", value:"table"}])
                 .form-elements-box2-column
                     .rich-checkbox-wrapper
-                        +richCheckbox("action", "rich checkbox buttons", [{name:"wide", nameText:"Широкий коридор", subText:"Ширина коридоров в номере не менее 91 см."},
+                        +richCheckbox("rich checkbox buttons", [{name:"wide", nameText:"Широкий коридор", subText:"Ширина коридоров в номере не менее 91 см."},
                             {name:"invalid-sup", nameText:"Помощник для инвалидов", subText:"На 1 этаже вас встретит специалист и проводит до номера."}])
                 .form-elements-box2-column
                     span.element-name bullet list

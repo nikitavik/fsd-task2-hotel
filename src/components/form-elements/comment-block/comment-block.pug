@@ -5,11 +5,11 @@ mixin commentBlock(userImg, userName, time, text, name)
         .comment-block-header
             .comment-block-header__image
                 .img.wrap
-                    img(src=`/img/users/${userImg}.jpg`, alt="user")
+                    img(src=`/img/users/${userImg}.png`, alt="user")
             .comment-block-header__title
                 .comment-block-header__name=userName
                 .comment-block-header__time=time
         .comment-block-body
             .comment-block-body__like
-                +likeBtn("action",`test-comment-like-${name}`, 12, false)
+                +likeBtn(`test-comment-like-${name}`, 12, false)
             .comment-block-body__text=text
