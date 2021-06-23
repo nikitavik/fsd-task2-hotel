@@ -8,7 +8,7 @@
   text-transform: uppercase;
   color: $Purple;
   background: #FFFFFF;
-}
-.borderless-button:hover{
-  color: $DarkShade50;
+  &:hover{
+    color: $DarkShade50;
+  }
 }

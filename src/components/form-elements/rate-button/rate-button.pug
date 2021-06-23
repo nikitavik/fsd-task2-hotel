@@ -1,5 +1,5 @@
-mixin rateBtn(name, action)
-    form.rate-button(action=action method="get")
+mixin rateBtn(name)
+    form.rate-button(method="get")
         input.rate-button__input(type="radio" name=name id=`star5-${name}` value="rate5")
         label.rate-button__star.material-icons(for=`star5-${name}`)
 

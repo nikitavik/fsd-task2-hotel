@@ -22,9 +22,6 @@
     &__name{
       font-weight: bold;
     }
-    &__time{
-
-    }
   }
   &-body{
     display: flex;
@@ -33,10 +30,10 @@
       min-width: 48px;
     }
     &__text{
-
       font-size: 14px;
       line-height: (24/14);
       color: $DarkShade75;
     }
   }
 }
+// TODO check if IMG in comment block works right

@@ -23,3 +23,4 @@
 //   valueMin.val(sliderElement.slider("values", 0));
 //   valueMax.val(sliderElement.slider("values", 1));
 // });
+// TODO REAMKE RANGE SLIDER

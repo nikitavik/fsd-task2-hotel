@@ -1,3 +1,4 @@
+// TODO Refactor Chart.JS
 // import Chart from "chart.js";
 //
 // $(document).ready(function() {

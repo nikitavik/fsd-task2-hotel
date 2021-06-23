@@ -1,4 +1,5 @@
 @import "src/styles/main";
+
 .arrow-button{
   width: 100%;
   max-width: 320px;
@@ -16,6 +17,9 @@
     line-height: (15/12);
     text-transform: uppercase;
     color: #FFFFFF;
+    &:hover{
+      opacity: 0.5;
+    }
   }
   &__arrow{
     position:absolute;
@@ -28,5 +32,9 @@
     right: 0;
 
     color: #FFFFFF;
+  }
+  &__button:hover > &__arrow {
+    transform: rotate(360deg);
+    transition: all 0.5s ease;
   }
 }
