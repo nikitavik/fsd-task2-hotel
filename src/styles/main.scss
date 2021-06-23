@@ -31,9 +31,17 @@ $Montserrat: 'Conv_Montserrat-Regular', "Montserrat", Sans-Serif;
 }
 body{
   font-family: $Montserrat;
+  max-width: 1920px;
+  min-width: 320px;
+}
+.container{
+  width: 100%;
+  padding: 70px 140px 0;
+  max-width: 1920px;
+  min-width: 320px;
 }
 
-
+// Index Page Styles
 .index{
   display: flex;
   flex-direction: column;

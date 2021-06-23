@@ -1,24 +1,27 @@
-// Main CSS
-
-import "/styles/reset.scss";
+// Main Pages CSS
 import "/styles/main.scss";
-import "/styles/index.scss";
-import "/styles/cards.scss";
-import "/styles/form-elements.scss";
-import "/styles/colors-and-types.scss";
-import "/styles/layout.scss";
+import "/styles/reset.scss";
+import "/styles/media.scss";
+
 import "/styles/landing-page.scss";
 import "/styles/registration.scss";
 import "/styles/sign-in.scss";
 import "/styles/search-room.scss";
 import "/styles/room-details.scss";
+
+// Components CSS
 import "/components/logo/logo.scss";
 import "/components/header/header.scss";
 import "/components/footer/footer.scss";
+
+// UI kit SCSS
+import "/styles/ui-kit-pages/cards.scss";
+import "/styles/ui-kit-pages/form-elements.scss";
+import "/styles/ui-kit-pages/colors-and-types.scss";
 import "/components/colors-and-types/color-block/color-block.scss";
 import "/components/colors-and-types/type-block/type-block.scss";
 
-// form element's css
+// Form element's css
 
 import "/components/form-elements/text-field/text-field.scss";
 import "/components/form-elements/button/button.scss";
@@ -65,8 +68,5 @@ import "/components/cards/room-card/room-card.js";
 import "/components/form-elements/chart/chart.js";
 
 import "/pages/search-room-menu.js";
-
-// Media
-import "/styles/media.scss";
 
 

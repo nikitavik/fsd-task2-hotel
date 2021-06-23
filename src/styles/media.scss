@@ -71,7 +71,7 @@
 
 // 600px (Padding fix)
 @media (max-width: 600px) {
-  .header {padding: 0 5px}
+  .header {padding: 0 5px !important;}
   .logo-text {font-size: 15px   ;padding-left: 5px !important;}
   .header-ghost-button-wrapper {padding-left: 5px !important}
 }
