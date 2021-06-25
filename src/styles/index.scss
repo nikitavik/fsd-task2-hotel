@@ -1,0 +1,52 @@
+// Main Pages CSS
+@import "main";
+@import "reset";
+@import "media";
+
+@import "landing-page";
+@import "registration";
+@import "sign-in";
+@import "search-room";
+@import "room-details";
+// Components CSS
+@import "../components/logo/logo";
+@import "../components/header/header";
+@import "../components/footer/footer";
+// UI kit SCSS
+@import "ui-kit-pages/cards";
+@import "ui-kit-pages/form-elements";
+@import "ui-kit-pages/colors-and-types";
+@import "../components/colors-and-types/color-block/color-block";
+@import "../components/colors-and-types/type-block/type-block";
+// Form element's css
+@import "../components/form-elements/text-field/text-field";
+@import "../components/form-elements/button/button";
+@import "../components/form-elements/ghost-button/ghost-button";
+@import "../components/form-elements/dropdown/dropdown";
+@import "../components/form-elements/checkbox-buttons/checkbox-buttons";
+@import "../components/form-elements/radio-buttons/radio-buttons";
+@import "../components/form-elements/arrow-button/arrow-button";
+@import "../components/form-elements/arrow-button/arrow-button";
+@import "../components/form-elements/toggle/toggle";
+@import "../components/form-elements/subscription-text-field/subscription-text-field";
+@import "../components/form-elements/like-button/like-button";
+@import "../components/form-elements/rate-button/rate-button";
+@import "../components/form-elements/range-slider/range-slider";
+@import "../components/form-elements/borderless-button/borderless-button";
+@import "../components/form-elements/pagination/pagination";
+@import "../components/form-elements/rich-checkbox/rich-checkbox";
+@import "../components/form-elements/bullet-list/bullet-list";
+@import "../components/form-elements/icon-text-list/icon-text-list";
+@import "../components/form-elements/expandable-checkbox/expandable-checkbox";
+@import "../components/form-elements/date-dropdown/date-dropdown";
+@import "../components/form-elements/masked-text-field/masked-text-field";
+@import "../components/form-elements/filter-date-dropdown/filter-date-dropdown";
+@import "../components/form-elements/comment-block/comment-block";
+@import "../components/form-elements/chart/chart";
+// cards css
+@import "../components/cards/search-card/search-card";
+@import "../components/cards/registration/registration-card";
+@import "../components/cards/login-card/login-card";
+@import "../components/cards/booking-card/booking-card";
+@import "../components/cards/room-card/room-card";
+
