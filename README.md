@@ -1,4 +1,4 @@
-# That broken app is on refactor stage but it acually works
+# That app is on refactor stage
 
 # Toxin Hotel
 
